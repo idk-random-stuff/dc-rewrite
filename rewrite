@@ -571,6 +571,11 @@ html.visual-refresh {
 		--bar-size: 4px !important;
 	}
 
+	.headerBarContent__1a9ce {
+		margin-right: 26px !important;
+	}
+
+	/* Orbs balance spacing */
 	.balanceWidgetMenu__80679 {
 		margin-right: 70px !important;
 	}
@@ -608,11 +613,14 @@ html.visual-refresh {
 		width: 150px !important;
 		margin-bottom: 25px;
 	}
+	.emojiButton__04eed {
+		transition: none !important;
+		background-color: transparent !important;
+	}
 	.buttonContainer_e6e74f {
 		margin-right: 5px;
-		&:hover {
-			background-color: transparent !important;
-		}
+		transition: none !important;
+		background-color: transparent !important;
 	}
 	.buttonWrapper_be95d0 > .buttonContainer_be95d0 > .button__201d5,
 	.sectionsContainer_def11f .button__201d5,
@@ -1056,6 +1064,11 @@ html.visual-refresh {
 			font-size: 14px;
 		}
 	}
+	.avatarWrapper__37e49 > .wrapper__44b0c > .avatarDecoration__44b0c {
+		width: 45px !important;
+		height: 40px !important;
+		margin-left: 1px;
+	}
 	.container__37e49 {
 		padding: 12px 3px 12px 12px;
 	}
@@ -1429,7 +1442,7 @@ html.visual-refresh {
 
 	/* ping icon */
 	.lowerBadge_cc5dd2 {
-		border: 5px solid var(--background-tertiary);
+		border: 5px solid !important;
 		border-radius: 50px;
 		margin-bottom: -5px;
 		margin-right: -5px;
@@ -1491,11 +1504,15 @@ html.visual-refresh {
 	}
 
 	/* unreads bars */
-	.bar__7aaec,
+	.bar__7aaec {
+		border: unset !important;
+		margin-bottom: 4px;
+		opacity: 0.9 !important;
+	}
 	.voiceBar__7aaec {
 		border: unset;
 		margin-bottom: 4px;
-		background-color: var(--background-accent);
+		background-color: var(--notice-background-positive) !important;
 		opacity: 0.9;
 	}
 	.top__7aaec,
