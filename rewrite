@@ -891,7 +891,7 @@ html.visual-refresh {
 		.channelTextArea__74017 {
 			box-sizing: border-box;
 			width: 100%;
-			height: 40px;
+			height: 45px;
 			border-radius: 3px;
 			background-color: var(--deprecated-text-input-bg);
 			border: 1px solid var(--deprecated-text-input-border);
@@ -2059,7 +2059,7 @@ html.visual-refresh {
 
 	/* owner crown */
 	.ownerIcon__5d473 {
-		color: var(--text-warning);
+		color: var(--text-feedback-warning) !important;
 	}
 
 	/* show header elements in a call */
@@ -2723,4 +2723,29 @@ div[data-menu-item="true"]:not(
 ):active {
   background-color: var(--menu-item-default-active-bg) !important;
   color: var(--header-primary) !important;
+}
+
+/* bool menu items */
+
+/* normal state */
+.item_c1e9c4[role="menuitemcheckbox"] {
+  background-color: transparent;
+  color: var(--interactive-normal);
+}
+
+/* hover state */
+.item_c1e9c4[role="menuitemcheckbox"]:hover {
+  background-color: var(--menu-item-default-hover-bg);
+  color: var(--header-primary);
+}
+
+/* active state */
+.item_c1e9c4[role="menuitemcheckbox"]:active {
+  background-color: var(--menu-item-default-active-bg);
+  color: var(--header-primary);
+}
+
+/* active fill */
+.item_c1e9c4[role="menuitemcheckbox"]:active .checkbox__09aca path {
+  fill: var(--header-primary);
 }
