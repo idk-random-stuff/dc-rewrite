@@ -1320,7 +1320,7 @@ html.visual-refresh {
 
 	/* jump to present bar */
 	.jumpToPresentBar__0f481 {
-		bottom: 12px;
+		bottom: 8px;
 		border-radius: 8px 8px 0 0;
 		background-color: var(--background-accent);
 		opacity: 0.95 !important;
@@ -1364,7 +1364,7 @@ html.visual-refresh {
 		min-height: 24px;
 		opacity: 0.95;
 		border: unset;
-		height: 0;
+		height: 25px;
 	}
 
 	.embedFull__623de {
