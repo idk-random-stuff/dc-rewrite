@@ -585,8 +585,27 @@ html.visual-refresh {
 	.balanceWidgetMenu__80679 {
 		margin-right: 70px !important;
 	}
+	/* custom make roblox red */
+	.gameIconWrapper__8c6c2 > .gameIcon_b52e4f[alt="App icon for Roblox"] {
+		filter: grayscale(1) brightness(0.5) sepia(1) saturate(10000%) hue-rotate(0deg);
+	}
 
 	/*buttons*/
+	/* Checkboxes revert */
+	.checkbox__09aca {
+		border-radius: 2px !important;
+	}
+	/* Join Voice Call Button */
+	.container__5aa3a > .joinButton__5aa3a > button {
+		transition: 0.3s;
+		border-radius: 50px !important;
+		background-color: var(--button-positive-background);
+		color: white !important;
+		&:hover {
+			transition: 0.3s;
+			background-color: var(--button-positive-background-hover);
+		}
+	}
 	.addFriend__133bf {
 		background: var(--button-positive-background) !important;
 		color: var(--text-primary) !important;
@@ -954,7 +973,7 @@ html.visual-refresh {
 	}
 	.chat_f75fb0,
 	.container__133bf,
-	:is(.content_f75fb0, .subtitleContainer_f75fb0, .sidebarList_c48ade, .container_c8ffbb) {
+	:is(.content_f75fb0, .subtitleContainer_f75fb0, .container_c8ffbb) {
 		border: none !important;
 	}
 	.base_c48ade .sidebar_c48ade > .guilds_c48ade {
@@ -2757,4 +2776,174 @@ div[data-menu-item="true"]:not(
 /* active fill */
 .item_c1e9c4[role="menuitemcheckbox"]:active .checkbox__09aca path {
   fill: var(--header-primary);
+}
+
+/* #user-context-voice-mute and #user-context-voice-deafen */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Attempting to revert the call UI since they removed experiment */
+/* === Restore 2024 Call UI Feel === */
+
+/* === GENERAL BUTTON STYLING === */
+.centerButton_f1ceac,
+.attachedButton_f1ceac,
+.colorable_f1ceac {
+  background-color: #2f3136 !important;
+  border-radius: 50px !important;
+  box-shadow: none !important;
+  padding: 12px !important;
+}
+
+/* === Uncomment out when finished === */
+
+.buttonSection__1405b {
+  background-color: transparent;
+  border: none;
+}
+.attachedCaretButtonContainer_f1ceac {
+  background-color: transparent !important;
+  border: none;
+}
+
+/* === MICROPHONE CONTROLS === */
+.colorable_f1ceac[aria-label="Mute"] {
+  background-color: #2f3136 !important;
+  width: 60px;
+  height: 60px;
+}
+.colorable_f1ceac[aria-label="Mute"] svg {
+  color: var(--white-500) !important;
+}
+
+.colorable_f1ceac[aria-label="Unmute"] {
+  background-color: var(--white-500) !important;
+  color: #2f3136 !important;
+
+  width: 60px;
+  height: 60px;
+}
+
+/* === CAMERA CONTROLS === */
+.colorable_f1ceac[aria-label="Turn On Camera"] {
+  background-color: #2f3136 !important;
+  color: #2f3136 !important;
+  width: 60px;
+  height: 60px;
+}
+
+.colorable_f1ceac[aria-label="Turn Off Camera"] {
+  background-color: var(--white-500) !important;
+  color: #2f3136 !important;
+  width: 60px;
+  height: 60px;
+}
+.colorable_f1ceac[aria-label="Turn Off Camera"] svg {
+  background-color: var(--white-500) !important;
+  color: var(--black) !important;
+  width: 60px;
+  height: 60px;
+}
+
+/* === STREAM CONTROLS === */
+.colorable_f1ceac[aria-label="Share Your Screen"] {
+  background-color: #2f3136 !important;
+  color: #2f3136 !important;
+  width: 60px;
+  height: 60px;
+}
+.colorable_f1ceac[aria-label="Stop Streaming"] {
+  background-color: var(--white-500) !important;
+  color: #2f3136 !important;
+  width: 60px;
+  height: 60px;
+}
+.colorable_f1ceac[aria-label="Stop Streaming"] svg {
+  background-color: var(--white-500) !important;
+  color: black !important;
+  width: 60px;
+  height: 60px;
+}
+
+/* === ACTIVITY CONTROLS === */
+.colorable_f1ceac[aria-label="Start An Activity"] {
+  background-color: #2f3136 !important;
+  color: #2f3136 !important;
+  width: 60px;
+  height: 60px;
+}
+/* Style the button when it's active */
+.centerButton_f1ceac[aria-label="Start An Activity"].active_f1ceac {
+    color: white !important;
+}
+/*style the SVG inside it */
+.centerButton_f1ceac[aria-label="Start An Activity"].active_f1ceac svg {
+	color: black !important;
+}
+
+.colorable_f1ceac[aria-label="Leave Activity"] {
+  background-color: var(--red-400) !important;
+  color: white !important;
+  width: 60px;
+  height: 60px;
+}
+
+/* === MORE OPTIONS BUTTON === */
+.attachedCaretButtonContainer_f1ceac button[aria-label="More Options"] {
+display: none !important;
+}
+
+/* === SOUNDBOARD === */
+.colorable_f1ceac[aria-label="Soundboard"] {
+  background-color: grey !important;
+  color: #2f3136 !important;
+  width: 60px;
+  height: 60px;
+}
+
+/* === DISCONNECT CONTROLS === */
+.colorable_f1ceac[aria-label="Disconnect"],
+.colorable_f1ceac[aria-label="Stop Watching"],
+.colorable_f1ceac[aria-label="Dismiss"] {
+  background-color: var(--red-400) !important;
+  color: white !important;
+  width: 60px;
+  height: 60px;
+}
+
+/* === JOIN CALL CONTROLS === */
+.centerButton_f1ceac[aria-label="Join Call"],
+.centerButton_f1ceac[aria-label="Join Video Call"] {
+  background-color: var(--green-360) !important;
+  width: 60px;
+  height: 60px;
+}
+
+/* === JOIN CALL CONTROLS === */
+.colorable_f1ceac[aria-label="More Options"] {
+    color: white !important;
+    fill: white !important;
+    border: 5px solid var(--black) !important;
+    transform: translateX(-25px) translateY(15px);
+	width: 3px;
+	height: 3px;
+	overflow: visible !important;
+	align-items: center !important;
+	justify-content: center !important;
 }
