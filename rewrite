@@ -591,7 +591,8 @@ html.visual-refresh {
 	}
 	/* theme selector rewrite */
 	.themeSelection__36dee,
-	.borderOverlay__8fea4 {
+	.borderOverlay__8fea4,
+	.appIconSelection__8a3d7 {
 		border-radius: 120px;
 		width: 60px !important;
 		height: 60px !important;
