@@ -589,7 +589,23 @@ html.visual-refresh {
 	.gameIconWrapper__8c6c2 > .gameIcon_b52e4f[alt="App icon for Roblox"] {
 		filter: grayscale(1) brightness(0.5) sepia(1) saturate(10000%) hue-rotate(0deg);
 	}
-
+	/* theme selector rewrite */
+	.themeSelection__36dee,
+	.borderOverlay__8fea4 {
+		border-radius: 120px;
+		width: 60px !important;
+		height: 60px !important;
+	}
+	.selectionCircle__36dee {
+		width: 65px !important;
+		height: 65px !important;
+		border-radius: 50% !important;
+		& > .checkmarkCircle__36dee {
+			margin-top: 5px;
+			margin-right: 10px;
+		}
+	}
+	
 	/*buttons*/
 	/* Checkboxes revert */
 	.checkbox__09aca {
@@ -857,8 +873,6 @@ html.visual-refresh {
 	.button_a22cb0 {
 		padding: 2px 16px;
 		.buttonChildrenWrapper_a22cb0 {
-			min-width: unset;
-			min-height: unset;
 			padding: unset;
 		}
 	}
@@ -915,7 +929,7 @@ html.visual-refresh {
 		.channelTextArea__74017 {
 			box-sizing: border-box;
 			width: 100%;
-			height: 45px;
+			min-height: 46px;
 			border-radius: 3px;
 			background-color: var(--deprecated-text-input-bg);
 			border: 1px solid var(--deprecated-text-input-border);
@@ -2386,6 +2400,9 @@ html .bar_c38106 {
 	margin-left: 55px;
 	margin-top: -29px;
 	height: calc(var(--custom-app-top-bar-height) - var(--space-12));
+}
+.iconWrapper__9293f[aria-label="Update Ready!"] {
+	display: none !important;
 }
 .winButtons_c38106 {
 	position: absolute;
