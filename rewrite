@@ -748,12 +748,6 @@ html.visual-refresh {
 	.visual-refresh span.button__67645 {
 		transition: none;
 	}
-	/* User Panel Buttons */
-	/* Game activity & settings*/
-	.buttons__37e49 > .button__201d5,
-	.buttons__37e49 > .button__67645 {
-		border-radius: 4px !important;
-	}
 
 	/* Mic & Deafen*/
 	.buttons__37e49 > div > .button__201d5,
@@ -1025,6 +1019,12 @@ html.visual-refresh {
 			"guilds guildsFolderList panels";
 	}
 	/* user panel */
+	/* Buttons (ATTACHED TO USERNAME) */
+	/* Game activity & settings*/
+	.buttons__37e49 > .button__201d5,
+	.buttons__37e49 > .button__67645 {
+		border-radius: 4px !important;
+	}
 	.base_c48ade .sidebar_c48ade > .panels_c48ade {
 		grid-area: panels;
 		position: static;
@@ -1057,7 +1057,6 @@ html.visual-refresh {
 		background-color: var(--bg-overlay-1, var(--background-base-lower-alt)) !important;
 		border-radius: 0 !important;
 	}
-
 	/* Shuffle & Repeat buttons */
 	.vc-spotify-shuffle-on,
 	.vc-spotify-repeat-context,
@@ -1065,7 +1064,6 @@ html.visual-refresh {
 		background-color: var(--opacity-green-12);
 		color: var(--green-new-30);
 	}
-
 	.vc-spotify-shuffle-on:hover,
 	.vc-spotify-repeat-context:hover,
 	.vc-spotify-repeat-track:hover {
@@ -1715,7 +1713,7 @@ html.visual-refresh {
 	}
 	.container_e131a9:has(.largePing__06d62) {
 		.subtext__339d0 {
-			max-width: 190px;
+			max-width: 180px;
 			position: fixed;
 			margin-left: -20px;
 		}
@@ -1778,7 +1776,7 @@ html.visual-refresh {
 
 	/* polls */
 	.container__0be77 {
-		background-color: var(--deprecated-card-editable-bg);
+		background-color: var(--background-surface-high);
 		border: unset;
 		.buttonPresentation__0be77 {
 			border: unset;
