@@ -600,11 +600,14 @@ html.visual-refresh {
 	.selectionCircle__36dee {
 		width: 65px !important;
 		height: 65px !important;
-		border-radius: 50% !important;
+		border-radius: 50px !important;
 		& > .checkmarkCircle__36dee {
 			margin-top: 5px;
 			margin-right: 10px;
 		}
+	}
+	.newRing__8fea4 rect {
+		rx: 30px;
 	}
 	
 	/*buttons*/
@@ -2065,12 +2068,14 @@ html.visual-refresh {
 				padding-right: 13px;
 			}
 		}
+		/* input thing
 		.input__0ed4f {
 			border-radius: 3px;
 			color: var(--text-default);
 			background-color: var(--deprecated-text-input-bg);
 			border: 1px solid var(--deprecated-text-input-border);
 		}
+		*/
 		.actionBar__8a031 {
 			border-top: 1px var(--border-subtle);
 			background: var(--background-surface-high);
