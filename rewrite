@@ -1025,6 +1025,10 @@ html.visual-refresh {
 	.buttons__37e49 > .button__67645 {
 		border-radius: 4px !important;
 	}
+	/* extra mute and deafen buttons */
+	.buttonChevron_37e49 {
+		display: none !important;
+	}
 	.base_c48ade .sidebar_c48ade > .panels_c48ade {
 		grid-area: panels;
 		position: static;
