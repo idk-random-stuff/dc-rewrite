@@ -1026,7 +1026,8 @@ html.visual-refresh {
 		border-radius: 4px !important;
 	}
 	/* extra mute and deafen buttons */
-	.micButtonParent__37e49 button[aria-label="Input Options"] {
+	.micButtonParent__37e49 button[aria-label="Input Options"],
+	.micButtonParent__37e49 button[aria-label="Output Options"] {
 		display: none !important;
 	}
 	.base_c48ade .sidebar_c48ade > .panels_c48ade {
