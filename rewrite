@@ -611,6 +611,11 @@ html.visual-refresh {
 	}
 	
 	/*buttons*/
+	/* Activity bot buttons */
+	.buttonContainer__6ca73 .button__6ca73 {
+		border-radius: 4px !important;
+		border: none !important;
+	}
 	/* Checkboxes revert */
 	.checkbox__09aca {
 		border-radius: 2px !important;
@@ -913,6 +918,19 @@ html.visual-refresh {
 		border-radius: 3px;
 	}
 	/* modal footers */
+	/* Manage App Modal Footer (seems to affect voice connected buttons too) */
+	.flex__7c0ba .button__201d5 {
+		max-height: 40px;
+		max-width: 120px;
+		border: none !important;
+		border-radius: 4px !important;
+	}
+	.flex__7c0ba .secondaryButton__468a6 {
+		background-color: var(--button-secondary);
+		&:hover {
+			background: var(--button-secondary-hover);
+		}
+	}
 	.footer__49fc1 {
 		border-radius: 0 0 5px 5px;
 		background-color: var(--background-surface-high);
@@ -1060,6 +1078,10 @@ html.visual-refresh {
 	.activityPanel_c48ade {
 		border-radius: 0px !important;
 		background-color: var(--bg-overlay-1, var(--background-base-lower-alt)) !important;
+		& > .body__5dec7 .actions__4cd01 .button__67645 {
+			border: none !important;
+			border-radius: 4px !important;
+		}
 	}
 	.container__4bbc6 {
 		border-radius: 0px !important;
