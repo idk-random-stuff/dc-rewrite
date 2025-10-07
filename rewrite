@@ -1030,6 +1030,15 @@ html.visual-refresh {
 	.micButtonParent__37e49 button[aria-label="Output Options"] {
 		display: none !important;
 	}
+	/* action buttons (camera, ss, activity, soundboard) */
+	.actionButtons_e131a9 {
+		padding-top: 20px;
+		border: none !important;
+		& .button_e131a9 {
+			border: none !important;
+			border-radius: 4px !important;
+		}
+	}
 	.base_c48ade .sidebar_c48ade > .panels_c48ade {
 		grid-area: panels;
 		position: static;
@@ -1710,7 +1719,6 @@ html.visual-refresh {
 		padding-right: 0;
 		.labelWrapper__06d62 .text-md\/medium_cf4812 {
 			font-size: 14px !important;
-
 		}
 		&:has(.voiceTimer) .connection_e131a9 {
 			padding-bottom: 20px;
