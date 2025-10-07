@@ -2068,9 +2068,7 @@ html.visual-refresh {
 		/* Modal close button */
 		.icon-only_a22cb0 {
 			padding: unset !important;
-			&:hover {
-				background: none !important;
-			}
+			background: none !important;
 		}
 		.header__8a031 .stack_dbd263 {
 			justify-content: center;
@@ -2585,7 +2583,8 @@ html .bar_c38106 {
 #message-actions-report,
 #message-ml-remove-history,
 #gdm-context-vc-ml-clear-channel,
-#manage-streamers-more-options--report-stream-problem {
+#manage-streamers-more-options--report-stream-problem,
+#clips-more-options-clips-delete {
 	background-color: transparent;
 	color: var(--status-danger);
 }
@@ -2609,7 +2608,8 @@ html .bar_c38106 {
 #message-actions-report .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #message-ml-remove-history .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #gdm-context-vc-ml-clear-channel .iconContainer_c1e9c4 .icon_c1e9c4 path,
-#manage-streamers-more-options--report-stream-problem .iconContainer_c1e9c4 .icon_c1e9c4 path {
+#manage-streamers-more-options--report-stream-problem .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#clips-more-options-clips-delete .iconContainer_c1e9c4 .icon_c1e9c4 path {
 	fill: var(--status-danger) !important;
 }
 
@@ -2632,7 +2632,8 @@ html .bar_c38106 {
 #message-actions-report:hover,
 #message-ml-remove-history:hover,
 #gdm-context-vc-ml-clear-channel:hover,
-#manage-streamers-more-options--report-stream-problem:hover {
+#manage-streamers-more-options--report-stream-problem:hover,
+#clips-more-options-clips-delete:hover {
 	background-color: var(--status-danger);
 	color: var(--header-primary) !important;
 }
@@ -2656,7 +2657,8 @@ html .bar_c38106 {
 #message-actions-report:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #message-ml-remove-history:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #gdm-context-vc-ml-clear-channel:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
-#manage-streamers-more-options--report-stream-problem:hover .iconContainer_c1e9c4 .icon_c1e9c4 path {
+#manage-streamers-more-options--report-stream-problem:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#clips-more-options-clips-delete:hover .iconContainer_c1e9c4 .icon_c1e9c4 path {
 	background-color: var(--menu-item-default-active-bg) !important;
 	fill: var(--header-primary) !important;
 }
@@ -2680,7 +2682,8 @@ html .bar_c38106 {
 #message-actions-report:active,
 #message-ml-remove-history:active,
 #gdm-context-vc-ml-clear-channel:active,
-#manage-streamers-more-options--report-stream-problem:active {
+#manage-streamers-more-options--report-stream-problem:active,
+#clips-more-options-clips-delete:active {
 	background-color: var(--menu-item-default-active-bg) !important;
 	color: var(--header-primary) !important;
 }
@@ -2704,7 +2707,8 @@ html .bar_c38106 {
 #message-actions-report:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #message-ml-remove-history:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #gdm-context-vc-ml-clear-channel:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
-#manage-streamers-more-options--report-stream-problem:active .iconContainer_c1e9c4 .icon_c1e9c4 path {
+#manage-streamers-more-options--report-stream-problem:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#clips-more-options-clips-delete:active .iconContainer_c1e9c4 .icon_c1e9c4 path {
 	background-color: var(--menu-item-default-active-bg) !important;
 	fill: var(--header-primary) !important;
 }
@@ -2729,7 +2733,8 @@ div[data-menu-item="true"]:not(
   #message-actions-report,
   #message-ml-remove-history,
   #gdm-context-vc-ml-clear-channel,
-  #manage-streamers-more-options--report-stream-problem
+  #manage-streamers-more-options--report-stream-problem,
+  #clips-more-options-clips-delete
 )
 {
   background-color: transparent !important;
@@ -2756,7 +2761,8 @@ div[data-menu-item="true"]:not(
   #message-actions-report,
   #message-ml-remove-history,
   #gdm-context-vc-ml-clear-channel,
-  #manage-streamers-more-options--report-stream-problem
+  #manage-streamers-more-options--report-stream-problem,
+  #clips-more-options-clips-delete
 ):hover {
   background-color: var(--menu-item-default-hover-bg) !important;
   color: var(--header-primary) !important;
@@ -2782,7 +2788,8 @@ div[data-menu-item="true"]:not(
   #message-actions-report,
   #message-ml-remove-history,
   #gdm-context-vc-ml-clear-channel,
-  #manage-streamers-more-options--report-stream-problem
+  #manage-streamers-more-options--report-stream-problem,
+  #clips-more-options-clips-delete
 ):active {
   background-color: var(--menu-item-default-active-bg) !important;
   color: var(--header-primary) !important;
