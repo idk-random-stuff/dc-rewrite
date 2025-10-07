@@ -329,11 +329,6 @@ html.visual-refresh {
 	.checkbox_c4538f {
 		border-radius: 3px;
 	}
-
-	.iconContainer_c1e9c4 {
-		width: 18px;
-		height: 18px;
-	}
 	.separator_c1e9c4 {
 		margin: 4px;
 	}
@@ -563,12 +558,6 @@ html.visual-refresh {
 	/* Video quest background fix */
 	.modalRoot_de2fa0 {
 		border-radius: 10px !important;
-	}
-
-	/* Applications icon fix */
-	.mask_ca5f52 {
-		margin-left: -6px;
-		margin-top: -8px !important;
 	}
 
 	/*Remove grabber / bar slider animations*/ 
