@@ -907,13 +907,6 @@ html.visual-refresh {
 		border-radius: 3px;
 	}
 	/* modal footers */
-	/* Manage App Modal Footer (seems to affect voice connected buttons too) */
-	.flex__7c0ba .button__201d5 {
-		max-height: 40px;
-		max-width: 120px;
-		border: none !important;
-		border-radius: 4px !important;
-	}
 	.flex__7c0ba .secondaryButton__468a6 {
 		background-color: var(--button-secondary);
 		&:hover {
