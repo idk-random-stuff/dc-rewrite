@@ -1039,6 +1039,11 @@ html.visual-refresh {
 			border-radius: 4px !important;
 		}
 	}
+	/* voice buttons */
+	.voiceButtonsContainer_e131a9 > .button__67645 {
+		border-radius: 4px !important;
+		margin-top: -10px;
+	}
 	.base_c48ade .sidebar_c48ade > .panels_c48ade {
 		grid-area: panels;
 		position: static;
