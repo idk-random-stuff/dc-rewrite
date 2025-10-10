@@ -28,14 +28,17 @@ html:not(.custom-theme-background).theme-dark {
 	--background-surface-higher: var(--background-floating, var(--background-tertiary)) !important;
 	--text-default: color-mix(in oklab, var(--primary-230) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
 }
-
+html.theme-darker,
+html.theme-midnight{
+	--button-secondary: hsl(220deg 100% 90% / 20%);
+	--button-secondary-hover: hsl(220deg 100% 90% / 30%);
+}
 html.custom-theme-background.theme-dark {
 	--background-tertiary: var(--background-base-lowest);
 	--background-secondary: var(--background-base-low);
 	--button-secondary: hsl(0deg 0% 100% / 20%);
 	--button-secondary-hover: hsl(0deg 0% 100% / 30%);
 	--background-primary: var(--background-surface-highest);
-
 }
 html.custom-theme-background.theme-light {
 	--background-tertiary: var(--background-surface-highest);
@@ -43,9 +46,14 @@ html.custom-theme-background.theme-light {
 	--button-secondary: hsl(0deg 0% 0% / 20%);
 	--button-secondary-hover: hsl(0deg 0% 0% / 30%);
 	--background-primary: var(--background-base-low);
-	--background-message-hover: var(--background-gradient-lowest);
 }
-
+html.custom-theme-background .contentRegionScroller__23e6b {
+	background: var(--background-primary);
+	margin-top: 23px;
+}
+html.custom-theme-background .sidebarRegionScroller__23e6b {
+	background: var(--background-secondary);
+}
 
 .theme-darker {
 	--background-modifier-accent: hsl(217, 0%, 20%);
@@ -284,9 +292,6 @@ html.visual-refresh {
 			width: 32px;
 			height: 32px;
 			padding: 4px;
-				&:hover {
-					background-color: var(--background-message-hover);
-			}
 		}
 	}
 	html:not(.density-cozy, .density-compact) .item_c1e9c4 {
@@ -600,6 +605,11 @@ html.visual-refresh {
 	}
 	
 	/*buttons*/
+	/* adopt server tag close button */
+	.closeButton_d6f39b .button_a22cb0 {
+		background: none !important;
+		width: 20px;
+	}
 	/* Activity bot buttons */
 	.buttonContainer__6ca73 .button__6ca73 {
 		border-radius: 4px !important;
@@ -1628,7 +1638,8 @@ html.visual-refresh {
 		color: var(--header-secondary);
 	}
 
-	/* go live modal */
+	/* old go live modal */
+	/* top art and background fixes */
 	.container_a55fdc {
 		background: unset;
 		box-shadow: unset;
@@ -1644,6 +1655,7 @@ html.visual-refresh {
 			margin-top: -1px;
 		}
 	}
+	/* main modal size */
 	.modalSize_a55fdc {
 		margin-top: -0.5px;
 		width: 410px;
@@ -1659,10 +1671,12 @@ html.visual-refresh {
 			display: none;
 		}
 	}
+	/* title spacing */
 	.segmentContainer_a2de16 {
 		margin: unset;
 		padding: unset;
 	}
+	/* Application, Screens, capture device options */
 	.segmentControl_a2de16 {
 		padding: 0 16px;
 	}
@@ -1676,12 +1690,14 @@ html.visual-refresh {
 		padding-bottom: 8px;
 		padding-top: 0;
 	}
+	/* Displayed screen scroller height */
 	.sourceScroller_a2de16 {
 		height: 300px;
 	}
 	.sourceContainer_a2de16 {
 		padding: 0px;
 	}
+	/* Displayed screen selector */
 	.tile_a2de16 {
 		padding: unset;
 		margin-top: 12px;
@@ -1695,6 +1711,7 @@ html.visual-refresh {
 		border-radius: 4px;
 		border: 1px solid var(--background-tertiary);
 	}
+	/* screen share art revert */
 	.refreshedArt_a55fdc {
 		content: url(https://static.discord.com/assets/3d0b430b1bae9f90.svg) !important;
 		display: inline-block;
@@ -1716,6 +1733,7 @@ html.visual-refresh {
 			background: var(--background-floating);
 		}
 	}
+
 
 	/* voice panel */
 	.wrapper_e131a9 {
@@ -2812,4 +2830,250 @@ div[data-menu-item="true"]:not(
 /* active fill */
 .item_c1e9c4[role="menuitemcheckbox"]:active .checkbox__09aca path {
   fill: var(--header-primary);
+}
+
+
+/* === Complete call UI rewrite. (This took 5 fucking months) === */
+
+/* Variables */
+:root {
+  --call-ui-bg: #2f3136;
+  --call-ui-white: white;
+  --call-ui-black: black;
+  --call-ui-danger: var(--red-400);
+  --call-ui-success: var(--green-360);
+  --button-size: 50px;
+  --small-button-size: 23px;
+}
+
+/* === BASE STYLES === */
+.centerButton_f1ceac,
+.attachedButton_f1ceac,
+.colorable_f1ceac {
+  background-color: var(--call-ui-bg) !important;
+  border-radius: 50px !important;
+  box-shadow: none !important;
+  padding: 12px !important;
+}
+
+.buttonSection__1405b,
+.attachedCaretButtonContainer_f1ceac {
+  background-color: transparent !important;
+  border: none;
+}
+
+/* === BUTTON CONTAINER SPACING FIX === */
+/* Fix spacing between camera, screenshare, and disconnect buttons */
+.attachedCaretButtonContainer_f1ceac {
+  margin: 0 2px !important; /* Reduced spacing between buttons */
+}
+
+/* Ensure button groups are properly spaced */
+.buttonSection__1405b {
+  gap: 4px !important; /* Consistent spacing between button groups */
+}
+
+/* === BUTTON SIZING === */
+.colorable_f1ceac,
+.centerButton_f1ceac[aria-label="Join Call"],
+.centerButton_f1ceac[aria-label="Join Video Call"],
+.attachedCaretButtonContainer_f1ceac button {
+  width: var(--button-size) !important;
+  height: var(--button-size) !important;
+}
+
+/* === SPECIFIC BUTTON SPACING FIXES === */
+/* Camera button container spacing */
+.attachedCaretButtonContainer_f1ceac:has([aria-label^="Turn On Camera"]),
+.attachedCaretButtonContainer_f1ceac:has([aria-label^="Turn Off Camera"]) {
+  margin-right: -13px !important; /* Tighten right spacing */
+}
+
+/* Disconnect button container spacing */
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Disconnect"]),
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Stop Watching"]),
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Leave Activity"]) {
+  margin-left: -17px !important; /* Tighten left spacing */
+}
+
+/* === MICROPHONE BUTTONS === */
+/* Muted state */
+.colorable_f1ceac[aria-label="Mute"] {
+  background-color: var(--call-ui-white) !important;
+}
+.colorable_f1ceac[aria-label="Mute"] svg {
+  color: var(--call-ui-black) !important;
+}
+
+/* Unmuted state */
+.colorable_f1ceac[aria-label="Unmute"] {
+  background-color: var(--call-ui-bg) !important;
+}
+.colorable_f1ceac[aria-label="Unmute"] svg {
+  color: var(--call-ui-white) !important;
+}
+
+/* === CAMERA BUTTONS === */
+.colorable_f1ceac[aria-label="Turn On Camera"] {
+  background-color: var(--call-ui-bg) !important;
+}
+
+.colorable_f1ceac[aria-label="Turn Off Camera"],
+.colorable_f1ceac[aria-label="Turn Off Camera"] svg {
+  background-color: var(--white-500) !important;
+  color: var(--call-ui-black) !important;
+}
+
+/* === STREAM BUTTONS === */
+.colorable_f1ceac[aria-label="Share Your Screen"] {
+  background-color: var(--call-ui-bg) !important;
+}
+
+.colorable_f1ceac[aria-label="Stop Streaming"],
+.colorable_f1ceac[aria-label="Stop Streaming"] svg {
+  background-color: var(--white-500) !important;
+  color: var(--call-ui-black) !important;
+}
+
+/* === ACTIVITY BUTTONS === */
+.colorable_f1ceac[aria-label="Start An Activity"] {
+  background-color: var(--call-ui-bg) !important;
+}
+
+.centerButton_f1ceac[aria-label="Start An Activity"].active_f1ceac {
+  background-color: var(--call-ui-white) !important;
+}
+.centerButton_f1ceac[aria-label="Start An Activity"].active_f1ceac svg {
+  color: var(--call-ui-black) !important;
+}
+
+.colorable_f1ceac[aria-label="Leave Activity"] {
+  background-color: var(--call-ui-danger) !important;
+  color: var(--call-ui-white) !important;
+}
+
+/* === ACTION BUTTONS === */
+.colorable_f1ceac[aria-label="Disconnect"],
+.colorable_f1ceac[aria-label="Stop Watching"],
+.colorable_f1ceac[aria-label="Dismiss"] {
+  background-color: var(--call-ui-danger) !important;
+  color: var(--call-ui-white) !important;
+}
+
+.centerButton_f1ceac[aria-label="Join Call"],
+.centerButton_f1ceac[aria-label="Join Video Call"] {
+  background-color: var(--call-ui-success) !important;
+}
+
+/* === CONTEXT MENU NUB STYLES === */
+/* Microphone nubs */
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Mute"]) .contextMenuNub_f1ceac {
+  background-color: var(--call-ui-white) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Mute"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-black) !important;
+  fill: var(--call-ui-black) !important;
+}
+
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Unmute"]) .contextMenuNub_f1ceac {
+  background-color: var(--call-ui-bg) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Unmute"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-white) !important;
+  fill: var(--call-ui-white) !important;
+}
+
+/* Camera nubs */
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Turn Off Camera"]) .contextMenuNub_f1ceac {
+  background-color: var(--call-ui-white) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Turn Off Camera"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-black) !important;
+  fill: var(--call-ui-black) !important;
+}
+
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Turn On Camera"]) .contextMenuNub_f1ceac {
+  background-color: var(--call-ui-bg) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Turn On Camera"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-white) !important;
+  fill: var(--call-ui-white) !important;
+}
+
+/* Stream nubs */
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Stop Streaming"]) .contextMenuNub_f1ceac {
+  background-color: var(--call-ui-white) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Stop Streaming"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-black) !important;
+  fill: var(--call-ui-black) !important;
+}
+
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Share Your Screen"]) .contextMenuNub_f1ceac {
+  background-color: var(--call-ui-bg) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Share Your Screen"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-white) !important;
+  fill: var(--call-ui-white) !important;
+}
+
+/* Activity nubs */
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Leave Activity"]) .contextMenuNub_f1ceac {
+  background-color: var(--status-danger) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Leave Activity"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-white) !important;
+  fill: var(--call-ui-white) !important;
+}
+
+/* Disconnect nubs */
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Disconnect"]) .contextMenuNub_f1ceac {
+  background-color: var(--status-danger) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Disconnect"]) .contextMenuNub_f1ceac svg {
+  color: var(--call-ui-white) !important;
+  fill: var(--call-ui-white) !important;
+}
+
+/* === MORE OPTIONS BUTTON === */
+/* Hide default more options */
+.attachedCaretButtonContainer_f1ceac button[aria-label="More Options"] {
+  display: none !important;
+}
+
+/* Small more options button */
+.colorable_f1ceac[aria-label="More Options"] {
+  display: flex !important;
+  color: var(--call-ui-white) !important;
+  fill: var(--call-ui-white) !important;
+  border: 4px solid var(--call-ui-black) !important;
+  transform: translateX(-23px) translateY(-1px);
+  width: var(--small-button-size) !important;
+  height: var(--small-button-size) !important;
+  padding: 0 !important;
+  position: absolute !important;
+}
+
+.colorable_f1ceac[aria-label="More Options"] svg {
+  width: 15px;
+  height: 15px;
+  overflow: visible !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* === ACTIVITY PANEL FIX === */
+.activityPanelContainer__49094 > .footer__49094 > .footerButtons__49094 > .buttonSection__49094 {
+  background-color: transparent !important;
+  transform: translateY(-5px) translateX(13px);
+}
+
+/* call panel voice buttons radius fix */
+.wrapper__2f4f7 .overlayContainer__2f4f7 .overlayBottom__2f4f7 .experimentOverlayTitle__2f4f7 {
+    border-radius: 4px !important;  /* your desired radius */
+	border: none !important;
+}
+.wrapper__2f4f7 .overlayContainer__2f4f7 .overlayBottom__2f4f7 .overlayButton__2f4f7 {
+    border-radius: 20px !important;
+	border: none !important;
 }
