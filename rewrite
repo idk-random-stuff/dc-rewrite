@@ -579,10 +579,6 @@ html.visual-refresh {
 	.balanceWidgetMenu__80679 {
 		margin-right: 70px !important;
 	}
-	/* custom make roblox red */
-	.gameIconWrapper__8c6c2 > .gameIcon_b52e4f[alt="App icon for Roblox"] {
-		filter: grayscale(1) brightness(0.5) sepia(1) saturate(10000%) hue-rotate(0deg);
-	}
 	/* theme selector rewrite */
 	.themeSelection__36dee,
 	.borderOverlay__8fea4,
@@ -630,13 +626,16 @@ html.visual-refresh {
 			background-color: var(--button-positive-background-hover);
 		}
 	}
+	/* Add friends top bar */
 	.addFriend__133bf {
+		min-height: 1px !important;
 		background: var(--button-positive-background) !important;
 		color: var(--text-primary) !important;
 	}
 	.addFriend__133bf:hover {
 		transition: 0.5s; background-color: var(--button-positive-background-hover) !important;
 	}
+
 	.actionButtons_cc1819 {
 		display: none;
 	}
@@ -1451,12 +1450,6 @@ html.visual-refresh {
 	/* add emoji button */
 	.largeReactionBtn__23977.forceShow__23977 {
 		padding: unset;
-	}
-	.reactionBtn__23977 {
-		opacity: 0;
-	}
-	.reactionBtn__23977:hover {
-		background: none;
 	}
 
 	/* channel category arrow */
