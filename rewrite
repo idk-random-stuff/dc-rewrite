@@ -641,13 +641,34 @@ html.visual-refresh {
 	}
 	/* Add friends top bar */
 	.addFriend__133bf {
-		min-height: 1px !important;
 		background: var(--button-positive-background) !important;
 		color: var(--text-primary) !important;
 	}
 	.addFriend__133bf:hover {
 		transition: 0.5s; background-color: var(--button-positive-background-hover) !important;
 	}
+	.item__133bf.item_aa8da2.themed_aa8da2 {
+		border-radius: 4px !important;
+		font-size: 16px !important;
+		font-weight: 600 !important;
+		line-height: 20px !important;
+		padding: 2px 8px !important;
+		min-height: 10px !important;
+		transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out !important;
+	}
+	.item__133bf.item_aa8da2.themed_aa8da2:not(.addFriend__133bf).selected_aa8da2 {
+		color: var(--interactive-active) !important;
+		background-color: var(--background-modifier-selected) !important;
+	}
+	.item__133bf.item_aa8da2.themed_aa8da2:not(.addFriend__133bf):hover {
+		color: var(--interactive-hover) !important;
+		background-color: var(--background-modifier-hover) !important;
+	}
+	.item__133bf.item_aa8da2.themed_aa8da2.selected_aa8da2:hover:not(.addFriend__133bf) {
+		color: var(--interactive-active) !important;
+		background-color: var(--background-modifier-selected) !important;
+	}
+
 
 	.actionButtons_cc1819 {
 		display: none;
