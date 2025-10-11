@@ -48,11 +48,11 @@ html.custom-theme-background.theme-light {
 	--background-primary: var(--background-base-low);
 }
 html.custom-theme-background .contentRegionScroller__23e6b {
-	background: var(--background-primary);
-	margin-top: 23px;
+	background: var(--background-secondary);
+	margin-top: 25px;
 }
 html.custom-theme-background .sidebarRegionScroller__23e6b {
-	background: var(--background-secondary);
+	background: var(--background-base-lowest);
 }
 
 .theme-darker {
@@ -252,6 +252,14 @@ html.theme-light :is(.hljs-meta .hljs-string, .hljs-regexp, .hljs-string) {
 
 html.visual-refresh {
 	/*servers and channels*/
+	/* Add a server svg revert */
+	.circleIconButton__5bc7e[aria-label="Add a Server"] .circleIcon__5bc7e {
+		width: 20px !important;
+		height: 20px !important;
+		background-color: currentColor !important;
+		-webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13 3a1 1 0 1 0-2 0v8H3a1 1 0 1 0 0 2h8v8a1 1 0 0 0 2 0v-8h8a1 1 0 0 0 0-2h-8V3Z"/></svg>') no-repeat center / contain;
+		mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13 3a1 1 0 1 0-2 0v8H3a1 1 0 1 0 0 2h8v8a1 1 0 0 0 2 0v-8h8a1 1 0 0 0 0-2h-8V3Z"/></svg>') no-repeat center / contain;
+	}
 	.childWrapperNoHoverBg__6e9f8 {
 		background-color: var(--background-mod-strong);
 	}
@@ -571,14 +579,14 @@ html.visual-refresh {
 		--bar-size: 4px !important;
 	}
 
-	.headerBarContent__1a9ce {
-		margin-right: 26px !important;
-	}
-
 	/* Orbs balance spacing */
 	.balanceWidgetMenu__80679 {
 		margin-right: 70px !important;
 	}
+	.headerBarContent__1a9ce {
+		margin-right: 34px !important;
+	}
+
 	/* theme selector rewrite */
 	.themeSelection__36dee,
 	.borderOverlay__8fea4,
@@ -600,6 +608,11 @@ html.visual-refresh {
 		rx: 30px;
 	}
 	
+	/* Now playing revert */
+	.nowPlayingColumn__133bf > .container__7d20c > .scroller__7d20c {
+		border: none;
+	}
+
 	/*buttons*/
 	/* adopt server tag close button */
 	.closeButton_d6f39b .button_a22cb0 {
@@ -1322,9 +1335,6 @@ html.visual-refresh {
 		.button__24af7:not(.noHover__24af7):hover {
 			background-color: unset;
 		}
-		.buttonWrapper__24af7:hover {
-			color: var(--interactive-hover);
-		}
 		.attachButtonInner__0923f {
 			transition: unset;
 			svg {
@@ -1472,7 +1482,8 @@ html.visual-refresh {
 	/* file embeds */
 	.wrapperAudio_cf09d8,
 	.file__0ccae,
-	.container_a8e786 {
+	.container_a8e786,
+	.gridContainer__623de {
 		background-color: var(--background-secondary);
 		border: 1px solid var(--background-secondary-alt);
 		box-shadow: unset;
@@ -1631,6 +1642,12 @@ html.visual-refresh {
 		color: var(--header-secondary);
 	}
 
+	/* Verify email address modal fix */
+	.wumpusExclamationImg_ad198f,
+	.emailHeaderImg_ad198f {
+		margin-top: -45px !important;
+	}
+
 	/* old go live modal */
 	/* top art and background fixes */
 	.container_a55fdc {
@@ -1657,7 +1674,7 @@ html.visual-refresh {
 			height: 36px;
 		}
 		.cancelButton_a55fdc {
-			margin-right: 150px;
+			margin-right: 8px !important;
 			background: var(--button-secondary);
 		}
 		.modalFooter_a55fdc .button__201d5:not([type="submit"], .lookLink__201d5) {
@@ -1972,7 +1989,7 @@ html.visual-refresh {
 		box-shadow: 0 2px 10px var(--opacity-black-20), 0 0 0 1px #1c242b99;
 		border: unset;
 		.input_ac6cb0 {
-			background-color: var(--deprecated-quickswitcher-input-background);
+			background-color: var(--deprecated-text-input-bg);
 			border: none;
 			border-radius: 5px;
 			box-shadow: var(--elevation-high);
@@ -2422,8 +2439,13 @@ html .bar_c38106 {
 	margin-top: -29px;
 	height: calc(var(--custom-app-top-bar-height) - var(--space-12));
 }
+/* Remove update ready tag */
 .iconWrapper__9293f[aria-label="Update Ready!"] {
-	display: none !important;
+	pointer-events: none;
+	cursor: default;
+}
+.iconWrapper__9293f[aria-label="Update Ready!"]:hover {
+	background: none !important;
 }
 .winButtons_c38106 {
 	position: absolute;
