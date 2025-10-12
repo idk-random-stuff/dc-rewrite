@@ -669,7 +669,7 @@ html.visual-refresh {
 		background-color: var(--background-modifier-selected) !important;
 	}
 
-
+	/* Image viewing buttons */
 	.actionButtons_cc1819 {
 		display: none;
 	}
@@ -692,21 +692,28 @@ html.visual-refresh {
 		width: 150px !important;
 		margin-bottom: 25px;
 	}
+	/* Chat bar emoji button */
 	.emojiButton__04eed {
 		transition: none !important;
 		background-color: transparent !important;
 	}
+	/* Chat bar activity button */
 	.buttonContainer_e6e74f {
 		margin-right: 5px;
 		transition: none !important;
 		background-color: transparent !important;
 	}
+	/* Settings disable side button animations */
+	.item_aa8da2.themed_aa8da2 {
+		transition: none !important;
+	}
+	/* Settings profiles tab buttons */
 	.buttonWrapper_be95d0 > .buttonContainer_be95d0 > .button__201d5,
 	.sectionsContainer_def11f .button__201d5,
 	.sectionsContainer_def11f .button_a22cb0,
 	.actions_fcf29c > .button__201d5,
 	.footer__49fc1 > .button__201d5,
-	.vc-vmsg-buttons > .button__201d5 {
+	.vc-btn-base {
 		border-radius: 4px !important;
 		border: none !important;
 	}
@@ -1085,7 +1092,7 @@ html.visual-refresh {
 	/* voice buttons */
 	.voiceButtonsContainer_e131a9 > .button__67645 {
 		border-radius: 4px !important;
-		margin-top: -10px;
+		margin-top: -5px;
 	}
 	.base_c48ade .sidebar_c48ade > .panels_c48ade {
 		grid-area: panels;
@@ -1763,6 +1770,165 @@ html.visual-refresh {
 		button {
 			background: var(--background-floating);
 		}
+	}
+
+
+	/* New go live modal */
+	/* Main modal size */
+	.root__7f727 {
+		margin-top: -0.5px !important;
+		width: 410px !important;
+		height: 600px;
+	}
+
+	/* Applications, Screens, Capture Devices */
+	/* Background container */
+	.pillContainer__9e06a {
+		background-color: transparent !important;
+		margin-left: -20px;
+		margin-top: 170px;
+	}
+
+	/* Screenshare options buttons */
+	.pillItem__9e06a {
+		background-color: transparent;
+		position: relative;
+		padding-bottom: 8px;
+		padding-top: 0;
+		margin-right: 20px;
+
+		/* Reset flex / spacing (makes it flat) */
+		align-items: unset;
+		display: unset;
+		flex: unset;
+		justify-content: unset;
+		margin-left: unset;
+		padding: unset !important;
+		margin: unset !important;
+
+		/* Hide icons */
+		.icon__9e06a {
+			display: none;
+		}
+
+		/* Text fixes */
+		.controlText__9e06a {
+			box-sizing: border-box;
+			padding-right: 10px;
+		}
+
+		/* Remove hover background */
+		&:hover {
+			background-color: transparent !important;
+		}
+
+		/* Underline active tab */
+		&.pillItemSelected__9e06a::after {
+			content: "";
+			position: absolute;
+			left: 0px;
+			bottom: -10px;
+			height: 2px;
+			width: calc(100% - 7px);
+			background-color: currentColor;
+		}
+	}
+
+	/* Screenshare Preview */
+	/* Preview box */
+	.sourcePreview_febe19 {
+		width: 180px;
+		height: 100px;
+		border: none !important;
+		border-radius: 4px !important;
+
+		&::before {
+			display: none !important;
+		}
+	}
+
+	/* Preview container border */
+	.sourcePreviewContainer_febe19::before {
+		border-radius: 4px !important;
+		border: 2px solid transparent !important;
+		transition: border 0.2s ease !important;
+	}
+	/* Preview container border (hover) */
+	.sourcePreviewContainer_febe19:hover::before {
+		border: 2px solid #5865f2 !important;
+	}
+
+	/* Name and hide app icons */
+	.sourceNameContainer_febe19 {
+		display: flex;
+		align-items: center !important;
+		justify-content: center;
+		text-align: center !important;
+
+		.sourceIcon_febe19,
+		svg {
+			display: none;
+		}
+	}
+
+	/* Clickable resize */
+	.source_febe19 {
+		width: 180px !important;
+	}
+
+	/* Preview row fix */
+	.root_febe19 {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 17px;
+	}
+
+	/* Header height */
+	.header__7f727 {
+		height: 180px;
+	}
+
+	/* Share your screen art + text */
+	.root__7f727,
+	.header__49fc1 {
+		overflow: visible !important;
+	}
+	.pillContainer__9e06a {
+		position: relative;
+	}
+	.pillContainer__9e06a::before {
+		content: "";
+		position: absolute;
+		top: -220px;
+		left: 50%;
+		transform: translateX(-50%) scale(1.4);
+		width: 200px;
+		height: 120px;
+		background: url(https://static.discord.com/assets/3d0b430b1bae9f90.svg) no-repeat center/contain;
+		pointer-events: none;
+	}
+	.pillContainer__9e06a::after {
+		content: "Share Screen\ASelect something to stream and have your\A friends grab a seat!";
+		white-space: pre;
+		position: absolute;
+		top: -80px;
+		left: 52%;
+		transform: translateX(-50%) scale(1.4);
+		width: 260px;
+		text-align: center;
+		pointer-events: none;
+		font-family: inherit;
+		line-height: 1.5;
+		color: transparent;
+		background: linear-gradient(
+			to bottom,
+			var(--header-primary) 0%, var(--header-primary) 40%,
+			var(--text-secondary) 40%, var(--text-secondary) 100%
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		font-weight: 600;
+		font-size: 14px;
 	}
 
 
