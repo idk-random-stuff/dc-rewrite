@@ -1110,10 +1110,18 @@ html.visual-refresh {
 	.activityPanel_c48ade {
 		border-radius: 0px !important;
 		background-color: var(--bg-overlay-1, var(--background-base-lower-alt)) !important;
+		/* Remove the "You're not sharing" button */
+		.textContent__2ee44 {
+			display: none;
+		}
 		& > .body__5dec7 .actions__4cd01 .button__67645 {
 			border: none !important;
 			border-radius: 4px !important;
 		}
+	}
+	/* Remove the warning image when invisible */
+	.container_caf802 > svg {
+		display: none !important;
 	}
 	.container__4bbc6 {
 		border-radius: 0px !important;
@@ -2525,7 +2533,7 @@ html.visual-refresh {
 	}
 }
 
-/*ttitle bar. and stufuff. i guess*/
+/* title bar and stuff i guess*/
 .bar_c38106:not(.systemBar_c38106):not(:has(.channelTabs-trailing)) {
 	padding: 0 12px 0 !important;
 	height: 50px;
@@ -2630,8 +2638,6 @@ html .bar_c38106 {
 .iconWrapper__9293f[aria-label="Update Ready!"] {
 	pointer-events: none;
 	cursor: default;
-}
-.iconWrapper__9293f[aria-label="Update Ready!"]:hover {
 	background: none !important;
 }
 .winButtons_c38106 {
@@ -3267,7 +3273,7 @@ div[data-menu-item="true"]:not(
 /* === ACTIVITY PANEL FIX === */
 .activityPanelContainer__49094 > .footer__49094 > .footerButtons__49094 > .buttonSection__49094 {
   background-color: transparent !important;
-  transform: translateY(-5px) translateX(13px);
+  transform: translateY(-5px) translateX(-5px);
 }
 
 /* call panel voice buttons radius fix */
@@ -3278,4 +3284,32 @@ div[data-menu-item="true"]:not(
 .wrapper__2f4f7 .overlayContainer__2f4f7 .overlayBottom__2f4f7 .overlayButton__2f4f7 {
     border-radius: 20px !important;
 	border: none !important;
+}
+
+
+/* Sliders / checks */
+/* Vencord Sliders Checked */
+.vc-switch-container.vc-switch-checked {
+	background-color: var(--button-positive-background);
+}
+.vc-switch-container.vc-switch-checked svg path {
+	fill: var(--button-positive-background);
+}
+
+/* Normal Sliders Checked */
+div[data-toggleable-component="switch"].checked__3f21e {
+	background-color: var(--button-positive-background) !important;
+}
+div[data-toggleable-component="switch"].checked__3f21e svg path {
+	fill: var(--button-positive-background) !important;
+}
+
+/* Vencord Sliders Unchecked */
+.vc-switch-container:not(.vc-switch-checked) {
+	background-color: #4E5058 !important;
+}
+
+/* Normal Sliders Unchecked */
+div[data-toggleable-component="switch"]:not(.checked__3f21e) {
+	background-color: #4E5058 !important;
 }
