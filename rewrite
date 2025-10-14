@@ -614,6 +614,10 @@ html.visual-refresh {
 	}
 
 	/*buttons*/
+	/* Server settings role editing */
+	.roleRow__5f97b .buttonsContainer__5f97b button {
+		min-width: 10px !important;
+	}
 	/* adopt server tag close button */
 	.closeButton_d6f39b .button_a22cb0 {
 		background: none !important;
@@ -909,12 +913,7 @@ html.visual-refresh {
 			}
 		}
 	}
-	.button_a22cb0 {
-		padding: 2px 16px;
-		.buttonChildrenWrapper_a22cb0 {
-			padding: unset;
-		}
-	}
+
 	.button__7d7f7 {
 		border-radius: 999% !important;
 	}
@@ -1119,8 +1118,9 @@ html.visual-refresh {
 			border-radius: 4px !important;
 		}
 	}
-	/* Remove the warning image when invisible */
-	.container_caf802 > svg {
+	/* Remove the warning image when invisible + dnd no notification */
+	.container_caf802 > svg,
+	.menuItemLabel_ce8328 > svg {
 		display: none !important;
 	}
 	.container__4bbc6 {
@@ -3251,29 +3251,30 @@ div[data-menu-item="true"]:not(
 
 /* Small more options button */
 .colorable_f1ceac[aria-label="More Options"] {
-  display: flex !important;
-  color: var(--call-ui-white) !important;
-  fill: var(--call-ui-white) !important;
-  border: 4px solid var(--call-ui-black) !important;
-  transform: translateX(-23px) translateY(-1px);
-  width: var(--small-button-size) !important;
-  height: var(--small-button-size) !important;
-  padding: 0 !important;
-  position: absolute !important;
+	display: flex !important;
+	color: var(--call-ui-white) !important;
+	fill: var(--call-ui-white) !important;
+	border: 4px solid var(--call-ui-black) !important;
+	transform: translateX(-23px) translateY(-1px);
+	width: var(--small-button-size) !important;
+	height: var(--small-button-size) !important;
+	padding: 0 !important;
+	position: absolute !important;
 }
 
 .colorable_f1ceac[aria-label="More Options"] svg {
-  width: 15px;
-  height: 15px;
-  overflow: visible !important;
-  align-items: center !important;
-  justify-content: center !important;
+	width: 15px;
+	height: 15px;
+	overflow: visible !important;
+	align-items: center !important;
+	justify-content: center !important;
 }
 
 /* === ACTIVITY PANEL FIX === */
 .activityPanelContainer__49094 > .footer__49094 > .footerButtons__49094 > .buttonSection__49094 {
-  background-color: transparent !important;
-  transform: translateY(-5px) translateX(-5px);
+	background-color: transparent !important;
+	transform: translateY(-5px) translateX(-5px);
+	border: none !important;
 }
 
 /* call panel voice buttons radius fix */
