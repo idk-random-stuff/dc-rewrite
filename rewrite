@@ -887,7 +887,7 @@ html.visual-refresh {
 	.section__00943,
 	.container__0be77,
 	.content__07f91 {
-		border-radius: 4px;
+		border-radius: 4px !important;
 	}
 	:is(.button_a22cb0, .expressiveRive_a22cb0):not(.cta_a3a802) {
 		border-radius: 3px;
@@ -2714,6 +2714,7 @@ html .bar_c38106 {
 		transition: ease 0.17s;
 		&.selected__5bc7e {
 			border-radius: 15px !important;
+			background-color: var(--bg-brand) !important;
 		}
 		border-radius: 50%;
 		width: 48px;
@@ -3313,4 +3314,142 @@ div[data-toggleable-component="switch"].checked__3f21e svg path {
 /* Normal Sliders Unchecked */
 div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 	background-color: #4E5058 !important;
+}
+
+
+
+/* old invites */
+.wrapper_d5f3cd {
+	border: none !important;
+}
+
+.guildInviteContainer__083ae {
+	width: 432px;
+	max-width: 100%;
+	display: flex;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	align-items: end;
+	justify-content: space-between;
+	padding: 8px;
+	gap: 8px;
+	height: calc(50px + 102px);
+	border-radius: 5px;
+
+	.cardHeightMeasure__083ae {
+		flex-direction: row !important;
+		flex-wrap: nowrap !important;
+		gap: 8px;
+		flex: 1 1 auto !important;
+		min-width: 0;
+	}
+
+	.mainContent__083ae,
+	.established__6e500 {
+		display: none;
+	}
+
+	.avatarContainer_dca174 {
+		margin-top: -5px;
+		padding: 0px;
+		overflow: hidden;
+		min-width: 50px;
+
+		foreignObject {
+			mask: none !important;
+			overflow: hidden;
+			border-radius: 16px;
+		}
+
+		>svg {
+			width: 50px;
+			height: 50px;
+			margin-bottom: 5px;
+		}
+	}
+	/* Join button width */
+	.footer__083ae {
+		width: fit-content;
+		flex-shrink: 0 !important;
+		height: 50px;
+		align-content: center;
+
+		.buttonContainer__083ae {
+			padding: 0px;
+			width: fit-content;
+
+			.button_a22cb0 {
+				height: 500px !important;
+			}
+		}
+	}
+	/* Position stuff properly */
+	.header__6e500 {
+		width: max-content !important;
+		padding: 0px;
+		margin: 0px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		.nameContainer__6e500,
+		.members__6e500,
+		.memberCount__6e500 {
+			width: 100% !important;
+			flex-wrap: nowrap;
+		}
+
+		[data-text-variant] {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.banner__083ae {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 100%;
+	}
+
+	.button__6af3a {
+		border-radius: 5px !important;
+	}
+}
+/* Remove background from server image */
+.avatarWrapper_dca174 {
+	background: transparent !important;
+}
+/* Add the you've been invited */
+.guildName__6e500::before {
+	position: absolute !important;
+	margin-top: -27px !important;
+	margin-left: -58px !important;
+	text-transform: uppercase !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	font-family: var(--font-primary) !important;
+	content: "You've been invited to join a server" !important;
+	color: var(--interactive-normal) !important;
+}
+/* Invites header text */
+.wrapper_d5f3cd .header_d5f3cd {
+	text-transform: uppercase !important;
+	font-size: 14px;
+}
+
+
+
+/* Tooltips border radius fix */
+div[class*="tooltip"] {
+	border-radius: 4px !important;
+}
+
+/* Move down on activated server icons */
+.blobContainer_e5445c .wrapper_cc5dd2 {
+	transition: transform 0s ease-in-out;
+}
+.blobContainer_e5445c:active .wrapper_cc5dd2 {
+	transform: translateY(1px);
 }
