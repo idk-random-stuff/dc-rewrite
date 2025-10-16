@@ -1424,6 +1424,9 @@ html.visual-refresh {
 			margin-left: unset;
 		}
 	}
+	.typingGradientNotAtBottom__36d07 {
+		mask: none !important;
+	}
 
 	/* Reply bar background fix */
 	.clipContainer__841c8 {
@@ -3280,10 +3283,10 @@ div[data-menu-item="true"]:not(
 
 /* call panel voice buttons radius fix */
 .wrapper__2f4f7 .overlayContainer__2f4f7 .overlayBottom__2f4f7 .experimentOverlayTitle__2f4f7 {
-    border-radius: 4px !important;  /* your desired radius */
+    border-radius: 5px !important;  /* your desired radius */
 	border: none !important;
 }
-.wrapper__2f4f7 .overlayContainer__2f4f7 .overlayBottom__2f4f7 .overlayButton__2f4f7 {
+.wrapper__2f4f7 .overlayContainer__2f4f7 button {
     border-radius: 20px !important;
 	border: none !important;
 }
