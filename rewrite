@@ -913,7 +913,12 @@ html.visual-refresh {
 			}
 		}
 	}
-
+	.button_a22cb0 {
+		padding: 2px 16px;
+		.buttonChildrenWrapper_a22cb0 {
+			padding: unset;
+		}
+	}
 	.button__7d7f7 {
 		border-radius: 999% !important;
 	}
@@ -1087,6 +1092,11 @@ html.visual-refresh {
 			border: none !important;
 			border-radius: 4px !important;
 		}
+	}
+	/* action buttons (camera, ss, activity, soundboard) active */
+	button.buttonActive_e131a9 {
+	    background: var(--green-new-30) !important;
+		color: inherit !important;
 	}
 	/* voice buttons */
 	.voiceButtonsContainer_e131a9 > .button__67645 {
@@ -2207,16 +2217,17 @@ html.visual-refresh {
 	}
 
 	/* tooltips */
-	.tooltipPrimary__382e7,
+	.tooltipPrimary_c36707,
 	.reactionTooltip_b49891,
 	.container__50387 {
 		background: var(--background-surface-higher);
+		border-radius: 4px !important;
 	}
-	.tooltipPrimary__382e7 .tooltipPointer__382e7 {
+	.tooltipPrimary_c36707 .tooltipPointer_c36707 {
 		border-top-color: var(--background-surface-higher);
 	}
-	.tooltipPointer__382e7.tooltipPointerBg__382e7:after,
-	.tooltipPointer__382e7.tooltipPointerBg__382e7:before {
+	.tooltipPointer_c36707.tooltipPointerBg_c36707:after,
+	.tooltipPointer_c36707.tooltipPointerBg_c36707:before {
 		border-top: unset;
 	}
 
@@ -2758,6 +2769,10 @@ html .bar_c38106 {
 	}
 }
 
+.spriteContainer__04eed {
+	--custom-emoji-sprite-size: 24px !important;
+}
+
 .layer__960e4.baseLayer__960e4 {
 	background-color: var(--bg-base-tertiary);
 }
@@ -3290,6 +3305,10 @@ div[data-menu-item="true"]:not(
     border-radius: 20px !important;
 	border: none !important;
 }
+/* return pointer on hover on call partacipant */
+.participant_c8dbe9 {
+	cursor: pointer !important;
+}
 
 
 /* Sliders / checks */
@@ -3443,13 +3462,7 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 }
 
 
-
-/* Tooltips border radius fix */
-div[class*="tooltip"] {
-	border-radius: 4px !important;
-}
-
-/* Move down on activated server icons */
+/* Move down activated server icons */
 .blobContainer_e5445c .wrapper_cc5dd2 {
 	transition: transform 0s ease-in-out;
 }
