@@ -646,7 +646,7 @@ html.visual-refresh {
 	/* Add friends top bar */
 	.addFriend__133bf {
 		background: var(--button-positive-background) !important;
-		color: var(--text-primary) !important;
+		color: var(--white) !important;
 	}
 	.addFriend__133bf:hover {
 		transition: 0.5s; background-color: var(--button-positive-background-hover) !important;
@@ -3444,7 +3444,7 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 	background: transparent !important;
 }
 /* Add the you've been invited */
-.guildName__6e500::before {
+.cozyMessage__5126c .guildName__6e500::before {
 	position: absolute !important;
 	margin-top: -27px !important;
 	margin-left: -58px !important;
