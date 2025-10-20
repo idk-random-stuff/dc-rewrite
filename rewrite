@@ -395,6 +395,14 @@ html.visual-refresh {
 		x: -4;
 		y: -4;
 	}
+	/* Group chat notifications fix */
+	.wrapper_cc5dd2 > .svg_cc5dd2 foreignObject[width="32"] {
+		x: 0;
+		y: 0;
+		& img {
+			border-radius: 10px !important;
+		}
+	}
 	.wrapper_cc5dd2 > .svg_cc5dd2 foreignObject[width="48"] {
 		x: 0;
 		y: 0;
@@ -1804,14 +1812,14 @@ html.visual-refresh {
 
 	/* Applications, Screens, Capture Devices */
 	/* Background container */
-	.pillContainer__9e06a {
+	.flex__7c0ba .pillContainer__9e06a {
 		background-color: transparent !important;
 		margin-left: -20px;
 		margin-top: 170px;
 	}
 
 	/* Screenshare options buttons */
-	.pillItem__9e06a {
+	.flex__7c0ba .pillItem__9e06a {
 		background-color: transparent;
 		position: relative;
 		padding-bottom: 8px;
@@ -1914,10 +1922,10 @@ html.visual-refresh {
 	.header__49fc1 {
 		overflow: visible !important;
 	}
-	.pillContainer__9e06a {
+	.flex__7c0ba .pillContainer__9e06a {
 		position: relative;
 	}
-	.pillContainer__9e06a::before {
+	.flex__7c0ba .pillContainer__9e06a::before {
 		content: "";
 		position: absolute;
 		top: -220px;
@@ -1928,7 +1936,7 @@ html.visual-refresh {
 		background: url(https://static.discord.com/assets/3d0b430b1bae9f90.svg) no-repeat center/contain;
 		pointer-events: none;
 	}
-	.pillContainer__9e06a::after {
+	.flex__7c0ba .pillContainer__9e06a::after {
 		content: "Share Screen\ASelect something to stream and have your\A friends grab a seat!";
 		white-space: pre;
 		position: absolute;
@@ -1950,6 +1958,19 @@ html.visual-refresh {
 		background-clip: text;
 		font-weight: 600;
 		font-size: 14px;
+	}
+
+	/* Custom theme editor modal */
+	.container__5a2df .footerContainer__5a2df {
+		margin-left: -5px !important;
+		& button {
+			width: 50px !important;
+			height: 38px !important;
+		}
+	}
+	.container__5a2df .closeButton__5a2df button {
+		height: 32px;
+		width: 32px;
 	}
 
 
