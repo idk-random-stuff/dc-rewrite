@@ -2238,6 +2238,10 @@ html.visual-refresh {
 	}
 
 	/* tooltips */
+	/* Tooltips border radius fix */
+	div[class*="tooltip"] {
+		border-radius: 4px !important;
+	}
 	.tooltipPrimary_c36707,
 	.reactionTooltip_b49891,
 	.container__50387 {
@@ -3325,10 +3329,33 @@ div[data-menu-item="true"]:not(
 .wrapper__2f4f7 .overlayContainer__2f4f7 button {
     border-radius: 20px !important;
 	border: none !important;
+	width: 30px;
+	height: 30px;
 }
 /* return pointer on hover on call partacipant */
 .participant_c8dbe9 {
 	cursor: pointer !important;
+}
+/* Watch Stream button */
+.streamPreview__2f4f7 .button_a22cb0 {
+	border-radius: 50px !important;
+	height: 50px !important;
+	border: none !important;
+	opacity: 5 !important;
+	background-color: #525458 !important;
+	.lineClamp1__4bd52 {
+		font-size: 16px !important;
+		font-weight: bold !important;
+	}
+}
+/* Watch Multiple streams button */
+.streamPreview__2f4f7 .addCta__2f4f7 .button_a22cb0 {
+	min-width: 45px !important;
+	max-width: 45px;
+	background-color: #525458 !important;
+	& svg {
+		stroke: white;
+	}
 }
 
 
