@@ -1,6 +1,9 @@
-/* Edit member list width */
 :root {
+	/* Member list width */
 	--custom-member-list-width: 240px;
+	/* Checkbox fix */
+	--blurple: var(--brand-experiment);
+	--brand-experiment: hsl(227, calc(var(--saturation-factor, 1) * 58%), 65%);
 }
 
 .theme-dark,
