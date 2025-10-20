@@ -1,3 +1,8 @@
+/* Edit member list width */
+:root {
+	--custom-member-list-width: 240px;
+}
+
 .theme-dark,
 .theme-light {
 	--checkbox-background-checked: var(--blurple) !important;
@@ -595,6 +600,17 @@ html.visual-refresh {
 		margin-right: 34px !important;
 	}
 
+	/* Orbs / $ shop */
+	.modalContent_c50f62 .pdpControls_c50f62 .wishlistButton_c50f62 {
+		border-radius: 4px !important;
+		width: 17px !important;
+		height: 17px !important;
+	}
+	.modalContent_c50f62 .pdpControls_c50f62 .button_a22cb0 {
+		width: 30px !important;
+		border-radius: 4px !important;
+	}
+
 	/* theme selector rewrite */
 	.themeSelection__36dee,
 	.borderOverlay__8fea4,
@@ -729,8 +745,8 @@ html.visual-refresh {
 		border-radius: 4px !important;
 		border: none !important;
 	}
-	.button__201d5:is(.bannerColor_fb7f94) {
-		border: unset;
+	.button__201d5:is(.bannerColor_fb7f94), .bannerButton_de8008 {
+		border: unset !important;
 	}
 	.item_b3f026 {
 		transition: none !important;
@@ -3356,6 +3372,20 @@ div[data-menu-item="true"]:not(
 	& svg {
 		stroke: white;
 	}
+}
+
+/* Server Voice call alone panel */
+/* Both buttons (Mainly Invite Friends) */
+.singleUserRoot__4ad81 .button_a22cb0 {
+	border-radius: 50px !important;
+	border: none !important;
+	min-height: 45px !important;
+	background-color: #525458 !important;
+	color: var(--white) !important;
+}
+/* Choose Activity button */
+.singleUserRoot__4ad81 > .stack_dbd263 > button.button_a22cb0:nth-of-type(2) {
+	background-color: var(--blurple-50) !important;
 }
 
 
