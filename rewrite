@@ -1,14 +1,13 @@
 :root {
 	/* Member list width */
 	--custom-member-list-width: 240px;
-	/* Checkbox fix */
-	--blurple: var(--brand-experiment);
+	/* Checkbox */
 	--brand-experiment: hsl(227, calc(var(--saturation-factor, 1) * 58%), 65%);
 }
 
 .theme-dark,
 .theme-light {
-	--checkbox-background-checked: var(--blurple) !important;
+	--checkbox-background-checked: var(--brand-experiment) !important;
 	--bg-brand: var(--blurple, var(--blurple-50)) !important;
 
 	--custom-channel-members-bg: var(--background-secondary);
