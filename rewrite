@@ -642,6 +642,11 @@ html.visual-refresh {
 	}
 
 	/*buttons*/
+	/* Server requires MFA button */
+	.btn__4c43d {
+		border-radius: 4px !important;
+		border: none !important;
+	}
 	/* Server settings role editing */
 	.roleRow__5f97b .buttonsContainer__5f97b button {
 		min-width: 10px !important;
@@ -1475,7 +1480,7 @@ html.visual-refresh {
 		padding: 0 !important;
 	}
 
-	/* jump to present bar + failed to load */
+	/* jump to present bar & failed to load bar */
 	.jumpToPresentBar__0f481, .messagesErrorBar__0f481 {
 		bottom: 9px;
 		padding-bottom: 4px !important;
@@ -2888,8 +2893,8 @@ html .bar_c38106 {
 #gdm-context-vc-ml-clear-channel,
 #manage-streamers-more-options--report-stream-problem,
 #clips-more-options-clips-delete {
-	background-color: transparent;
-	color: var(--status-danger);
+	background-color: transparent !important;
+	color: var(--status-danger) !important;
 }
 
 /* red menu buttons icon */
@@ -2937,8 +2942,10 @@ html .bar_c38106 {
 #gdm-context-vc-ml-clear-channel:hover,
 #manage-streamers-more-options--report-stream-problem:hover,
 #clips-more-options-clips-delete:hover {
-	background-color: var(--status-danger);
-	color: var(--header-primary) !important;
+	background-color: var(--status-danger) !important;
+	.label_c1e9c4 {
+		color: var(--header-primary) !important;
+	}
 }
 
 /* red menu buttons icon hover */
@@ -3041,7 +3048,7 @@ div[data-menu-item="true"]:not(
 )
 {
   background-color: transparent !important;
-  color: var(--interactive-normal);
+  color: var(--interactive-normal) !important;
 }
 
 /* normal menu buttons hover */
