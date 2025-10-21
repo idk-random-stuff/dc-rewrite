@@ -716,6 +716,8 @@ html.visual-refresh {
 	.shinyButton__6a443 {
 		border-radius: 4px !important;
 		border: none !important;
+		background-color: var(--button-filled-brand-inverted-background) !important;
+		color: var(--brand-500) !important;
 	}
 	.entryPointButtonContainer_f75fb0 .entryPointAppCommandButtonContainer_a83188 > button[data-mana-component="button"] {
 		border-radius: 4px !important;
