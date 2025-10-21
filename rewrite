@@ -1475,13 +1475,15 @@ html.visual-refresh {
 		padding: 0 !important;
 	}
 
-	/* jump to present bar */
-	.jumpToPresentBar__0f481 {
-		bottom: 8px;
+	/* jump to present bar + failed to load */
+	.jumpToPresentBar__0f481, .messagesErrorBar__0f481 {
+		bottom: 9px;
+		padding-bottom: 4px !important;
 		border-radius: 8px 8px 0 0;
+	}
+	.jumpToPresentBar__0f481 {
 		background-color: var(--background-accent);
 		opacity: 0.95 !important;
-		padding-bottom: 4px !important;
 		color: var(--white-500);
 		.barButtonBase__0f481 {
 			padding-left: unset;
@@ -1521,7 +1523,7 @@ html.visual-refresh {
 		min-height: 24px;
 		opacity: 0.95;
 		border: unset;
-		height: 25px;
+		height: 0;
 	}
 
 	.embedFull__623de {
