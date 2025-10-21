@@ -2309,6 +2309,13 @@ html.visual-refresh {
 		}
 	}
 
+	/* Blocked dm bar */
+	.chatContent_f75fb0:not([aria-label*="announcements"]) {
+		.content__44df5::before {
+			display: none !important;
+		}
+	}
+
 	/* clip footer */
 	.mosaicItem__6c706:is(.mosaicItemWithFooter__6c706) .container_b9f75c {
 		background: var(--background-base-lowest);
