@@ -3,6 +3,8 @@
 	--custom-member-list-width: 240px;
 	/* Checkbox */
 	--brand-experiment: hsl(227, calc(var(--saturation-factor, 1) * 58%), 65%);
+	/* Chat bar */
+	--custom-channel-textarea-text-area-height: 44px;
 }
 
 .theme-dark,
@@ -1354,6 +1356,7 @@ html.visual-refresh {
 		margin-top: -12px;
 		.channelTextArea__74017 {
 			border: none;
+			border-radius: 5px;
 		}
 		.buttons__74017 {
 			margin-right: -6px !important;
@@ -1400,8 +1403,9 @@ html.visual-refresh {
 		}
 
 		.attachWrapper__0923f {
-			padding: 10px 0px 6px 6px;
+			padding: 6px 0px 6px 6px;
 			position: relative;
+			bottom: 2px;
 		}
 		.button__24af7:not(.noHover__24af7) {
 			transition: unset;
