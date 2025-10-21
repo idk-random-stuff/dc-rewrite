@@ -1560,6 +1560,18 @@ html.visual-refresh {
 		color: var(--text-link);
 	}
 
+	/* Dropdown menu's */
+	.select__28e94 {
+		background-color: var(--background-secondary);
+		border-radius: 5px !important;
+	}
+	.popout__3f413 {
+		margin-bottom: -3px !important;
+		border-bottom-left-radius: 0px !important;
+		border-bottom-right-radius: 0px !important;
+		border: none !important;
+	}
+
 	/* file embeds */
 	.wrapperAudio_cf09d8,
 	.file__0ccae,
