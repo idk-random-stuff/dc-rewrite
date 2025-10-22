@@ -2332,11 +2332,7 @@ html.visual-refresh {
 	}
 
 	/* Blocked dm bar */
-	.chatContent_f75fb0:not([aria-label*="announcements"]) {
-		.content__44df5::before {
-			display: none !important;
-		}
-	}
+	
 
 	/* clip footer */
 	.mosaicItem__6c706:is(.mosaicItemWithFooter__6c706) .container_b9f75c {
@@ -3323,8 +3319,10 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 	background-color: transparent !important;
 	border: none !important;
 	gap: unset !important;
-	margin: unset !important;
 	padding: unset !important;
+	.attachedCaretButtonContainer_f1ceac:has([aria-label="Leave Activity"]) {
+		margin-left: -14px !important;
+	}
 }
 .fullRegionDropdownButton_f1ceac {
 	background-color: transparent !important;
@@ -3565,12 +3563,6 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 	overflow: visible !important;
 	align-items: center !important;
 	justify-content: center !important;
-}
-/* === ACTIVITY PANEL FIX === */
-.activityPanelContainer__49094 > .footer__49094 > .footerButtons__49094 > .buttonSection__49094 {
-	background-color: transparent !important;
-	transform: translateY(-5px) translateX(-5px);
-	border: none !important;
 }
 /* call panel voice buttons radius fix */
 .wrapper__2f4f7 .overlayContainer__2f4f7 .overlayBottom__2f4f7 .experimentOverlayTitle__2f4f7 {
