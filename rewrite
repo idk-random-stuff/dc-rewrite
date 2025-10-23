@@ -1121,13 +1121,20 @@ html.visual-refresh {
 	}
 	/* action buttons (camera, ss, activity, soundboard) */
 	.actionButtons_e131a9 {
-		padding-top: 20px;
-		border: none !important;
 		& .button_e131a9 {
 			border: none !important;
 			border-radius: 4px !important;
+			background: var(--background-gradient-highest);
 		}
 	}
+
+	/* call timer fix */
+	.wrapper_e131a9:has([class*="rtcConnectionStatus_"] p) {
+		.actionButtons_e131a9 {
+			padding-top: 20px;
+		}
+	}
+
 	/* action buttons (camera, ss, activity, soundboard) active */
 	button.buttonActive_e131a9 {
 	    background: var(--green-new-30) !important;
@@ -2024,9 +2031,6 @@ html.visual-refresh {
 		.labelWrapper__06d62 .text-md\/medium_cf4812 {
 			font-size: 14px !important;
 		}
-		&:has(.voiceTimer) .connection_e131a9 {
-			padding-bottom: 20px;
-		}
 	}
 	.container_e131a9:has(.largePing__06d62) {
 		.subtext__339d0 {
@@ -2245,8 +2249,8 @@ html.visual-refresh {
 	.form__468a6:has(.alignCenter_abf706) .footer__49fc1 .primaryButton__468a6.sizeMedium__201d5 {
 		height: 50px;
 	}
-	.footer__49fc1 {
-		.button__201d5 {
+	.justifyStart_abf706 {
+		.sizeMedium__201d5 {
 			border-radius: 5px;
 			min-width: 96px !important;
 			max-width: 96px !important;
