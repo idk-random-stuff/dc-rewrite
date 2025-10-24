@@ -719,12 +719,22 @@ html.visual-refresh {
 		border: none !important;
 		background-color: transparent !important;
 	}
-
-	.shinyButton__6a443 {
+	/* Buy nitro button background */
+	.shinyButton__6a443:not(.claimBtn_de2fa0, .ctaButtonWrapper__2055a) {
 		border-radius: 4px !important;
 		border: none !important;
 		background-color: var(--button-filled-brand-inverted-background) !important;
 		color: var(--brand-500) !important;
+		&:hover {
+			background-color: var(--button-filled-brand-inverted-background-hover) !important;
+		}
+	}
+	/* Claim quest button */
+	.claimBtn_de2fa0, .ctaButtonWrapper__2055a {
+		border-radius: 4px !important;
+		border: none !important;
+		min-height: 38px !important;
+		max-height: 38px !important;
 	}
 	.entryPointButtonContainer_f75fb0 .entryPointAppCommandButtonContainer_a83188 > button[data-mana-component="button"] {
 		border-radius: 4px !important;
@@ -1127,19 +1137,31 @@ html.visual-refresh {
 			background: var(--background-gradient-highest);
 		}
 	}
-
-	/* call timer fix */
-	.wrapper_e131a9:has([class*="rtcConnectionStatus_"] p) {
-		.actionButtons_e131a9 {
-			padding-top: 20px;
-		}
-	}
-
 	/* action buttons (camera, ss, activity, soundboard) active */
 	button.buttonActive_e131a9 {
-	    background: var(--green-new-30) !important;
+		background: var(--green-new-30) !important;
 		color: inherit !important;
 	}
+
+	/* call timer fix */
+	/* No action buttons */
+	.wrapper_e131a9:has([class*="rtcConnectionStatus_"] p):not(:has(.actionButtons_e131a9)) {
+		height: 70px;
+	}
+	.wrapper_e131a9:has([class*="rtcConnectionStatus_"] p):not(:has(.actionButtons_e131a9)) 
+	.connection_e131a9 {
+		border-bottom: none;
+	}
+	.wrapper_e131a9:has([class*="rtcConnectionStatus_"] p):not(:has(.actionButtons_e131a9)) 
+	.connection_e131a9::after {
+		display: none;
+	}
+	/* With action buttons */
+	.wrapper_e131a9:has([class*="rtcConnectionStatus_"] p):has(.actionButtons_e131a9) 
+	.actionButtons_e131a9 {
+		padding-top: 20px !important;
+	}
+
 	/* voice buttons */
 	.voiceButtonsContainer_e131a9 > .button__67645 {
 		border-radius: 4px !important;
@@ -1478,7 +1500,7 @@ html.visual-refresh {
 			margin-left: unset;
 		}
 	}
-	.typingGradientNotAtBottom__36d07 {
+	.typingGradientNotAtBottom__36d07, .scroller__36d07 {
 		mask: none !important;
 	}
 
@@ -2335,9 +2357,6 @@ html.visual-refresh {
 		}
 	}
 
-	/* Blocked dm bar */
-	
-
 	/* clip footer */
 	.mosaicItem__6c706:is(.mosaicItemWithFooter__6c706) .container_b9f75c {
 		background: var(--background-base-lowest);
@@ -2843,6 +2862,7 @@ html .bar_c38106 {
 
 /* hides left sidebar when fullscreen mode */
 .base_c48ade[data-fullscreen="true"] {
+	margin-top: -22px;
 	.sidebar_c48ade {
 		display: none !important;
 	}
@@ -3616,4 +3636,17 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 /* Choose Activity button */
 .singleUserRoot__4ad81 > .stack_dbd263 > button.button_a22cb0:nth-of-type(2) {
 	background-color: var(--blurple-50) !important;
+}
+/* Stages invite people to speak fixes */
+/* Requests to speak */
+.participantRowContainer__664ff {
+	.buttonContainer__664ff .button_a22cb0 {
+		min-width: 40px !important;
+		max-width: 40px !important;
+		border: none !important;
+	}
+}
+/* Allow requests from everyone */
+.container__664ff .container__5a838 {
+	margin-top: 15px !important;
 }
