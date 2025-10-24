@@ -720,7 +720,7 @@ html.visual-refresh {
 		background-color: transparent !important;
 	}
 	/* Buy nitro button background */
-	.shinyButton__6a443:not(.claimBtn_de2fa0, .ctaButtonWrapper__2055a) {
+	.premiumCards_ac86f6 .shinyButton__6a443{
 		border-radius: 4px !important;
 		border: none !important;
 		background-color: var(--button-filled-brand-inverted-background) !important;
@@ -731,8 +731,6 @@ html.visual-refresh {
 	}
 	/* Claim quest button */
 	.claimBtn_de2fa0, .ctaButtonWrapper__2055a {
-		border-radius: 4px !important;
-		border: none !important;
 		min-height: 38px !important;
 		max-height: 38px !important;
 	}
@@ -1129,6 +1127,11 @@ html.visual-refresh {
 	.micButtonParent__37e49 button[aria-label="Output Options"] {
 		display: none !important;
 	}
+	/* User panel claim reward button */
+	.fullWidth__201d5 {
+		border-radius: 4px !important;
+		border: none !important;
+	}
 	/* action buttons (camera, ss, activity, soundboard) */
 	.actionButtons_e131a9 {
 		& .button_e131a9 {
@@ -1266,6 +1269,10 @@ html.visual-refresh {
 	}
 
 	/* style dms correctly (refresh edition) */
+	/* Nameplate dm list */
+	.dm__972a0 .videoContainer__4bbc6, .dm__972a0 video {
+		border-radius: 4px !important;
+	}
 	.channel__972a0 {
 		.highlighted__20a53 .subtext__972a0 {
 			color: var(--interactive-active);
