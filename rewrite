@@ -1448,6 +1448,9 @@ html.visual-refresh {
 			position: relative;
 			bottom: 2px;
 		}
+		.icon__4d3a9 {
+			padding: 10px 0px 6px 13px;
+		}
 		.button__24af7:not(.noHover__24af7) {
 			transition: unset;
 		}
@@ -2393,7 +2396,7 @@ html.visual-refresh {
 		padding: unset;
 		border-radius: 5px;
 		border: unset;
-		background: var(--background-primary);
+		background: var(--background-surface-high);
 		.section__8a031 {
 			padding: 12px;
 		}
@@ -2929,7 +2932,9 @@ html .bar_c38106 {
 #message-ml-remove-history,
 #gdm-context-vc-ml-clear-channel,
 #manage-streamers-more-options--report-stream-problem,
-#clips-more-options-clips-delete {
+#clips-more-options-clips-delete,
+#user-context-voice-mute,
+#user-context-voice-deafen {
 	background-color: transparent !important;
 	color: var(--status-danger) !important;
 }
@@ -2954,7 +2959,9 @@ html .bar_c38106 {
 #message-ml-remove-history .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #gdm-context-vc-ml-clear-channel .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #manage-streamers-more-options--report-stream-problem .iconContainer_c1e9c4 .icon_c1e9c4 path,
-#clips-more-options-clips-delete .iconContainer_c1e9c4 .icon_c1e9c4 path {
+#clips-more-options-clips-delete .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#user-context-voice-mute .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#user-context-voice-deafen .iconContainer_c1e9c4 .icon_c1e9c4 path {
 	fill: var(--status-danger) !important;
 }
 
@@ -2978,7 +2985,9 @@ html .bar_c38106 {
 #message-ml-remove-history:hover,
 #gdm-context-vc-ml-clear-channel:hover,
 #manage-streamers-more-options--report-stream-problem:hover,
-#clips-more-options-clips-delete:hover {
+#clips-more-options-clips-delete:hover,
+#user-context-voice-mute:hover,
+#user-context-voice-deafen:hover {
 	background-color: var(--status-danger) !important;
 	.label_c1e9c4 {
 		color: var(--header-primary) !important;
@@ -3005,7 +3014,9 @@ html .bar_c38106 {
 #message-ml-remove-history:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #gdm-context-vc-ml-clear-channel:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #manage-streamers-more-options--report-stream-problem:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
-#clips-more-options-clips-delete:hover .iconContainer_c1e9c4 .icon_c1e9c4 path {
+#clips-more-options-clips-delete:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#user-context-voice-mute:hover .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#user-context-voice-deafen:hover .iconContainer_c1e9c4 .icon_c1e9c4 path {
 	background-color: var(--menu-item-default-active-bg) !important;
 	fill: var(--header-primary) !important;
 }
@@ -3030,7 +3041,9 @@ html .bar_c38106 {
 #message-ml-remove-history:active,
 #gdm-context-vc-ml-clear-channel:active,
 #manage-streamers-more-options--report-stream-problem:active,
-#clips-more-options-clips-delete:active {
+#clips-more-options-clips-delete:active,
+#user-context-voice-mute:active,
+#user-context-voice-deafen:active {
 	background-color: var(--menu-item-default-active-bg) !important;
 	color: var(--header-primary) !important;
 }
@@ -3055,7 +3068,9 @@ html .bar_c38106 {
 #message-ml-remove-history:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #gdm-context-vc-ml-clear-channel:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
 #manage-streamers-more-options--report-stream-problem:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
-#clips-more-options-clips-delete:active .iconContainer_c1e9c4 .icon_c1e9c4 path {
+#clips-more-options-clips-delete:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#user-context-voice-mute:active .iconContainer_c1e9c4 .icon_c1e9c4 path,
+#user-context-voice-deafen:active .iconContainer_c1e9c4 .icon_c1e9c4 path {
 	background-color: var(--menu-item-default-active-bg) !important;
 	fill: var(--header-primary) !important;
 }
@@ -3081,7 +3096,9 @@ div[data-menu-item="true"]:not(
   #message-ml-remove-history,
   #gdm-context-vc-ml-clear-channel,
   #manage-streamers-more-options--report-stream-problem,
-  #clips-more-options-clips-delete
+  #clips-more-options-clips-delete,
+  #user-context-voice-mute,
+  #user-context-voice-deafen
 )
 {
   background-color: transparent !important;
@@ -3109,10 +3126,13 @@ div[data-menu-item="true"]:not(
   #message-ml-remove-history,
   #gdm-context-vc-ml-clear-channel,
   #manage-streamers-more-options--report-stream-problem,
-  #clips-more-options-clips-delete
-):hover {
+  #clips-more-options-clips-delete,
+  #user-context-voice-mute,
+  #user-context-voice-deafen
+):hover, .iconContainer_c1e9c4 .icon_c1e9c4 path {
   background-color: var(--menu-item-default-hover-bg) !important;
   color: var(--header-primary) !important;
+  fill: var(--header-primary) !important;
 }
 
 /* normal menu buttons active */
@@ -3136,35 +3156,12 @@ div[data-menu-item="true"]:not(
   #message-ml-remove-history,
   #gdm-context-vc-ml-clear-channel,
   #manage-streamers-more-options--report-stream-problem,
-  #clips-more-options-clips-delete
+  #clips-more-options-clips-delete,
+  #user-context-voice-mute,
+  #user-context-voice-deafen
 ):active {
   background-color: var(--menu-item-default-active-bg) !important;
   color: var(--header-primary) !important;
-}
-
-/* bool menu items */
-
-/* normal state */
-.item_c1e9c4[role="menuitemcheckbox"] {
-  background-color: transparent;
-  color: var(--interactive-normal);
-}
-
-/* hover state */
-.item_c1e9c4[role="menuitemcheckbox"]:hover {
-  background-color: var(--menu-item-default-hover-bg);
-  color: var(--header-primary);
-}
-
-/* active state */
-.item_c1e9c4[role="menuitemcheckbox"]:active {
-  background-color: var(--menu-item-default-active-bg);
-  color: var(--header-primary);
-}
-
-/* active fill */
-.item_c1e9c4[role="menuitemcheckbox"]:active .checkbox__09aca path {
-  fill: var(--header-primary);
 }
 
 /* Sliders / checks */
