@@ -343,10 +343,7 @@ html.visual-refresh {
 		color: white;
 	}
 	.colorDefault_c1e9c4.focused_c1e9c4 .checkbox__09aca.checked__09aca {
-		background: var(--blurple-inverted);
-		& path {
-			fill: var(--blurple) !important;
-		}
+		border: inherit !important;
 	}
 	.checkbox__09aca {
 		border-radius: 3px;
@@ -923,7 +920,7 @@ html.visual-refresh {
 	}
 	/* border radius 9 list of offenders */
 	.root__49fc1,
-	.container__23ba6,
+	.container_caf802,
 	.searchBar__5ec2f,
 	.tooltip_c36707,
 	.link__2ea32,
@@ -1108,6 +1105,28 @@ html.visual-refresh {
 		grid-template-areas: "guilds betterFoldersSidebar sidebar" "guilds betterFoldersSidebar panels";
 		width: auto !important;
 	}
+	.vc-betterFolders-sidebar .scroller_ef3116 {
+		padding-top: 2px !important;
+		gap: 0px !important;
+	}
+	.vc-betterFolders-sidebar .isExpanded__48112 ul.stack_dbd263 {
+		height: unset !important;
+	}
+	.vc-betterFolders-sidebar .listItem__650eb:has(.guildSeparator__252b6) {
+		margin: 6px 0 8px 0 !important;
+	}
+	.vc-betterFolders-sidebar .listItem__650eb {
+		margin: 0 0 0px !important;
+		width: 75px !important;
+	}
+	.vc-betterFolders-sidebar .folderIcon__48112 {
+		margin-top: 0px !important;
+		margin-left: -2px !important;
+	}
+	.vc-betterFolders-sidebar .folderIcon__48112 svg {
+		width: 24px !important;
+		height: 24px !important;
+	}
 	/* ServerFolders (betterdiscord) */
 	.folderContentIsOpen_ac0584 .base__5e434 {
 		grid-template-areas:
@@ -1210,7 +1229,7 @@ html.visual-refresh {
 		}
 	}
 	/* Remove the warning image when invisible + dnd no notification */
-	.container__23ba6 > svg,
+	.container_caf802 > svg,
 	.menuItemLabel_ce8328 > svg {
 		display: none !important;
 	}
@@ -2828,8 +2847,8 @@ html .bar_c38106 {
 	.scroller_ef3116 {
 		padding-top: 2px;
 		gap: 0px !important;
-		ul.stack_dbd263 {
-			height: auto !important;
+		.isExpanded__48112 ul.stack_dbd263 {
+			height: unset !important;
 		}
 	}
 	#guild-list-unread-dms:has(.listItem__650eb) {
@@ -2845,7 +2864,7 @@ html .bar_c38106 {
 	.guildSeparator__252b6 {
 		height: 2px;
 	}
-	.folderHeader__48112 {
+	.folderIcon__48112 {
 		margin-top: 0px;
 		margin-left: -2px;
 		& svg {
@@ -3542,6 +3561,9 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 .attachedCaretButtonContainer_f1ceac:has([aria-label="Unmute"]) .contextMenuNub_f1ceac svg {
   color: var(--call-ui-white) !important;
   fill: var(--call-ui-white) !important;
+}
+.attachedCaretButtonContainer_f1ceac:has([aria-label="Disconnect Quietly"]) .contextMenuNub_f1ceac {
+	background-color: var(--call-ui-danger) !important;
 }
 
 /* Camera nubs */
