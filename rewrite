@@ -1123,11 +1123,11 @@ html.visual-refresh {
 		margin: 0 0 0px !important;
 		width: 75px !important;
 	}
-	.vc-betterFolders-sidebar .folderHeader__48112 {
+	.vc-betterFolders-sidebar .folderIcon__48112 {
 		margin-top: 0px !important;
 		margin-left: -2px !important;
 	}
-	.vc-betterFolders-sidebar .folderHeader__48112 svg {
+	.vc-betterFolders-sidebar .folderIcon__48112 svg {
 		width: 24px !important;
 		height: 24px !important;
 	}
@@ -1238,7 +1238,7 @@ html.visual-refresh {
 		}
 	}
 	/* Remove the warning image when invisible + dnd no notification */
-	.container_a244c3 > svg,
+	.container_caf802 > svg,
 	.menuItemLabel_ce8328 > svg {
 		display: none !important;
 	}
@@ -2849,7 +2849,7 @@ html .bar_c38106 {
 		padding-top: 2px;
 		gap: 0px !important;
 		.isExpanded__48112 ul.stack_dbd263 {
-			height: unset !important;
+			height: auto !important;
 		}
 	}
 	#guild-list-unread-dms:has(.listItem__650eb) {
@@ -2860,14 +2860,12 @@ html .bar_c38106 {
 	}
 	.listItem__650eb {
 		margin: 0 0 0px;
-		width: 75px;
 	}
 	.guildSeparator__252b6 {
 		height: 2px;
 	}
-	.folderHeader__48112 {
+	.folderIcon__48112 {
 		margin-top: 0px;
-		margin-left: -2px;
 		& svg {
 			width: 24px;
 			height: 24px;
