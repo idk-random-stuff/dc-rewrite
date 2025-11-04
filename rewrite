@@ -175,6 +175,10 @@ html.platform-win .sidebarListRounded__5e434 {
 html.platform-win .trailing_c38106 :is(.recentsIcon_c99c29, .anchor_edefb8) {
 	transform: translateY(3px);
 }
+/* Title bar clips button */
+.trailing_c38106 > div > .button__85643 {
+	display: none;
+}
 html.platform-win .container__5e434:has(.notice__6e2b9, .bd-notice) .sidebarListRounded__5e434 {
 	border-top-left-radius: unset !important;
 }
@@ -760,7 +764,7 @@ html.visual-refresh {
 	.buttonWrapper_d2eed6 > .buttonContainer_d2eed6 > .button__201d5,
 	.sectionsContainer_def11f .button__201d5,
 	.sectionsContainer_def11f .button_a22cb0,
-	.actions_fcf29c > .button__201d5,
+	.actions__9a9f9 > .button__201d5,
 	.footer__49fc1 > .button__201d5,
 	.vc-btn-base {
 		border-radius: 4px !important;
@@ -920,7 +924,7 @@ html.visual-refresh {
 	}
 	/* border radius 9 list of offenders */
 	.root__49fc1,
-	.container_caf802,
+	.container_e45859,
 	.searchBar__5ec2f,
 	.tooltip_c36707,
 	.link__2ea32,
@@ -1119,11 +1123,11 @@ html.visual-refresh {
 		margin: 0 0 0px !important;
 		width: 75px !important;
 	}
-	.vc-betterFolders-sidebar .folderIcon__48112 {
+	.vc-betterFolders-sidebar .folderHeader__48112 {
 		margin-top: 0px !important;
 		margin-left: -2px !important;
 	}
-	.vc-betterFolders-sidebar .folderIcon__48112 svg {
+	.vc-betterFolders-sidebar .folderHeader__48112 svg {
 		width: 24px !important;
 		height: 24px !important;
 	}
@@ -1180,6 +1184,11 @@ html.visual-refresh {
 	}
 
 	/* call timer fix */
+	/* call timer Connected for addition */
+	.panels__5e434 .lineClamp1__4bd52 p::before {
+		content: "Connected for ";
+		font-family: var(--font-primary) !important;
+	}
 	/* No action buttons */
 	.wrapper_e131a9:has([class*="rtcConnectionStatus_"] p):not(:has(.actionButtons_e131a9)) {
 		height: 70px;
@@ -1229,7 +1238,7 @@ html.visual-refresh {
 		}
 	}
 	/* Remove the warning image when invisible + dnd no notification */
-	.container_caf802 > svg,
+	.container_a244c3 > svg,
 	.menuItemLabel_ce8328 > svg {
 		display: none !important;
 	}
@@ -1304,9 +1313,6 @@ html.visual-refresh {
 	/* style dms correctly (refresh edition) */
 	/* Nameplate dm + server list */
 	.dm__972a0 .videoContainer__4bbc6, .members_c8ffbb .videoContainer__4bbc6 {
-		border-radius: 4px !important;
-	}
-	.container_e45859 {
 		border-radius: 4px !important;
 	}
 	.channel__972a0 {
@@ -1809,15 +1815,6 @@ html.visual-refresh {
 	}
 	.statusText__19b6d {
 		color: var(--header-secondary);
-	}
-
-	/* Clips modal footer */
-	.clipForm__54978 .clipFormFooter__54978 {
-		button {
-			border-radius: 4px !important;
-			border: none !important;
-			font-size: 14px;
-		}
 	}
 
 	/* Verify email address modal */
@@ -2521,7 +2518,7 @@ html.visual-refresh {
 	}
 
 	/* unsaved changes */
-	.container_fcf29c {
+	.container__9a9f9 {
 		background-color: var(--background-tertiary);
 	}
 
@@ -2709,6 +2706,10 @@ html.visual-refresh {
 	height: 50px;
 	margin-top: -33px;
 }
+/* title bar clips readjust */
+.bar_c38106:not(.systemBar_c38106):not(:has(.channelTabs-trailing)):has(.trailing_c38106 > div > .button__85643[aria-label="View Clips"]) {
+	padding: 0 4px 0 !important;
+}
 .bar_c38106 .title_c38106 {
 	text-align: start;
 	display: block;
@@ -2864,7 +2865,7 @@ html .bar_c38106 {
 	.guildSeparator__252b6 {
 		height: 2px;
 	}
-	.folderIcon__48112 {
+	.folderHeader__48112 {
 		margin-top: 0px;
 		margin-left: -2px;
 		& svg {
@@ -3246,7 +3247,6 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 .wrapper_d5f3cd {
 	border: none !important;
 }
-
 .guildInviteContainer__083ae {
 	width: 432px;
 	max-width: 100%;
@@ -3335,6 +3335,7 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 		top: 0px;
 		right: 0px;
 		width: 100%;
+		height: 45%;
 	}
 
 	.button_a22cb0 {
@@ -3497,10 +3498,12 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
   background-color: var(--call-ui-bg) !important;
 }
 
-.colorable_f1ceac[aria-label="Turn Off Camera"],
-.colorable_f1ceac[aria-label="Turn Off Camera"] svg {
+.colorable_f1ceac[aria-label="Turn Off Camera"] {
   background-color: var(--white-500) !important;
   color: var(--call-ui-black) !important;
+}
+.colorable_f1ceac[aria-label="Turn Off Camera"] svg {
+	color: var(--call-ui-black);
 }
 
 /* === STREAM BUTTONS === */
@@ -3737,4 +3740,29 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 /* Allow requests from everyone */
 .container__664ff .container__5a838 {
 	margin-top: 15px !important;
+}
+
+
+/* Activity wording */
+/* Playing dm */
+.container_c9d15c.textWithIconContainer_c9d15c:has(> svg[viewBox="0 0 24 24"] path[fill-rule="evenodd"]) .activityStatusText__972a0::before {
+	content: "Playing ";
+}
+/* Music dm */
+.container_c9d15c.textWithIconContainer_c9d15c:has(> svg[viewBox="0 0 24 24"] path[d*="M8.65 1.51"]) .activityStatusText__972a0::before {
+	content: "Listening to ";
+}
+/* Playing server */
+.container_c9d15c.textWithIconContainer_c9d15c:has(> svg[viewBox="0 0 24 24"] path[fill="#43a25a"]) 
+.activityStatusText__972a0,
+.container_c9d15c.textWithIconContainer_c9d15c:has(> svg[viewBox="0 0 24 24"] path[fill="#43a25a"]) 
+.truncated_c9d15c::before {
+	content: "Playing ";
+}
+/* Music server */
+.container_c9d15c.textWithIconContainer_c9d15c:has(> svg[viewBox="0 0 24 24"] path[d*="M8.65 1.51"]) 
+.activityStatusText__972a0,
+.container_c9d15c.textWithIconContainer_c9d15c:has(> svg[viewBox="0 0 24 24"] path[d*="M8.65 1.51"]) 
+.truncated_c9d15c::before {
+	content: "Listening to ";
 }
