@@ -1125,12 +1125,16 @@ html.visual-refresh {
 	}
 	.vc-betterFolders-sidebar .folderIcon__48112 {
 		margin-top: 0px !important;
-		margin-left: -2px !important;
+		margin-left: 0px !important;
 	}
 	.vc-betterFolders-sidebar .folderIcon__48112 svg {
 		width: 24px !important;
 		height: 24px !important;
 	}
+	.vc-betterFolders-sidebar .folderButtonInner__48112 {
+		left: -2px;
+	}
+
 	/* ServerFolders (betterdiscord) */
 	.folderContentIsOpen_ac0584 .base__5e434 {
 		grid-template-areas:
