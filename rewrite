@@ -5,6 +5,12 @@
 	--brand-experiment: hsl(227, calc(var(--saturation-factor, 1) * 58%), 65%);
 	/* Chat bar */
 	--custom-channel-textarea-text-area-height: 44px;
+	/* Search bar background */
+	--deprecated-text-input-bg: #0000001a;
+	/* Search bar input */
+	--deprecated-text-input-border: #0000004d;
+	/* Search bar input hover */
+	--deprecated-text-input-border-hover: #040405;
 }
 
 .theme-dark,
@@ -1630,9 +1636,13 @@ html.visual-refresh {
 		min-height: 0px;
 	}
 
-	/* add emoji button */
+	/* add reaction button */
 	.largeReactionBtn__23977.forceShow__23977 {
 		padding: unset;
+	}
+	/* add reaction modal button */
+	.reactionSelected_b7f4b4, .reactionDefault_b7f4b4 {
+		border-radius: 4px !important;
 	}
 
 	/* channel category arrow */
@@ -2876,7 +2886,9 @@ html .bar_c38106 {
 		}
 	}
 }
-
+.folderGroupBackground__48112 {
+	border: none !important;
+}
 .folderPreviewGuildIcon__48112 {
 	border-radius: 32px !important;
 }
@@ -3250,8 +3262,10 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 	border: none !important;
 }
 .guildInviteContainer__083ae {
-	width: 432px;
+	width: 415px;
 	max-width: 100%;
+	border: none !important;
+	background-color: var(--background-secondary) !important;
 	display: flex;
 	flex-direction: row !important;
 	flex-wrap: nowrap !important;
@@ -3259,15 +3273,15 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 	justify-content: space-between;
 	padding: 8px;
 	gap: 8px;
-	height: calc(50px + 102px);
-	border-radius: 5px;
+	height: calc(70px + 100px);
+	border-radius: 5px !important;
 
 	.cardHeightMeasure__083ae {
 		flex-direction: row !important;
 		flex-wrap: nowrap !important;
 		gap: 8px;
 		flex: 1 1 auto !important;
-		min-width: 0;
+		min-width: unset;
 	}
 
 	.mainContent__083ae,
@@ -3284,13 +3298,13 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 		foreignObject {
 			mask: none !important;
 			overflow: hidden;
-			border-radius: 16px;
+			border-radius: 20px;
 		}
 
 		>svg {
-			width: 50px;
-			height: 50px;
-			margin-bottom: 5px;
+			width: 51px !important;
+			height: 51px !important;
+			margin-bottom: 0px;
 		}
 	}
 	/* Join button width */
@@ -3350,9 +3364,10 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 }
 /* Add the you've been invited */
 .cozyMessage__5126c .guildName__6e500::before {
+	pointer-events: none !important;
 	position: absolute !important;
-	margin-top: -27px !important;
-	margin-left: -58px !important;
+	margin-top: -30px !important;
+	margin-left: -57px !important;
 	text-transform: uppercase !important;
 	font-size: 14px !important;
 	font-weight: bold !important;
@@ -3360,7 +3375,7 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 	content: "You've been invited to join a server" !important;
 	color: var(--interactive-normal) !important;
 }
-/* Invites header text */
+/* Other invite header text */
 .wrapper_d5f3cd .header_d5f3cd {
 	text-transform: uppercase !important;
 	font-size: 14px;
@@ -3767,4 +3782,22 @@ div[data-toggleable-component="switch"]:not(.checked__3f21e) {
 .container_c9d15c.textWithIconContainer_c9d15c:has(> svg[viewBox="0 0 24 24"] path[d*="M8.65 1.51"]) 
 .truncated_c9d15c::before {
 	content: "Listening to ";
+}
+
+
+/* Search bars */
+.wrapper__72c38,
+.bioTextArea__6a919 {
+	border-radius: 3px;
+	color: var(--text-default) !important;
+	background-color: var(--deprecated-text-input-bg) !important;
+	border: 1px solid var(--deprecated-text-input-border) !important;
+	transition: border-color 0.2s ease-in-out;
+	&:hover {
+		border-color: var(--deprecated-text-input-border-hover) !important;
+	}
+	&:focus-within {
+		border-color: var(--blurple-50) !important;
+		--custom-input-focus-border-color: var(--blurple-50) !important;
+	}
 }
