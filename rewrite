@@ -1437,6 +1437,14 @@ html.visual-refresh {
 		}
 	*/
 	/* chat box */
+	/* Chat bar activity button */
+	.buttonContainer_e6e74f {
+		margin-right: 5px;
+		svg {
+			width: 25px !important;
+			height: 25px !important;
+		}
+	}
 	.scrollerSpacer__36d07 {
 		height: 30px;
 	}
